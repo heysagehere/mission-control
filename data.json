@@ -1,27 +1,68 @@
 {
   "columns": [
-    { "id": "backlog", "title": "Backlog", "emoji": "📋" },
-    { "id": "up-next", "title": "Up Next", "emoji": "🎯" },
-    { "id": "in-progress", "title": "In Progress", "emoji": "🔨" },
-    { "id": "blocked", "title": "Blocked", "emoji": "⏸️" },
-    { "id": "done", "title": "Done", "emoji": "✅" }
+    {
+      "id": "backlog",
+      "title": "Backlog",
+      "emoji": "📋"
+    },
+    {
+      "id": "up-next",
+      "title": "Up Next",
+      "emoji": "🎯"
+    },
+    {
+      "id": "in-progress",
+      "title": "In Progress",
+      "emoji": "🔨"
+    },
+    {
+      "id": "blocked",
+      "title": "Blocked",
+      "emoji": "⏸️"
+    },
+    {
+      "id": "done",
+      "title": "Done",
+      "emoji": "✅"
+    }
   ],
   "projects": [
-    { "id": "forage-bali", "name": "Forage Bali", "color": "#7B9E6B" },
-    { "id": "knowyurself", "name": "KnowYurself", "color": "#8B9DC3" },
-    { "id": "fridays-at-four", "name": "Fridays at Four", "color": "#E07A3D" },
-    { "id": "alex-ops", "name": "Alex Ops", "color": "#9B7BC3" },
-    { "id": "personal", "name": "Personal", "color": "#C37B7B" }
+    {
+      "id": "forage-bali",
+      "name": "Forage Bali",
+      "color": "#7B9E6B"
+    },
+    {
+      "id": "knowyurself",
+      "name": "KnowYurself",
+      "color": "#8B9DC3"
+    },
+    {
+      "id": "fridays-at-four",
+      "name": "Fridays at Four",
+      "color": "#E07A3D"
+    },
+    {
+      "id": "alex-ops",
+      "name": "Alex Ops",
+      "color": "#9B7BC3"
+    },
+    {
+      "id": "personal",
+      "name": "Personal",
+      "color": "#C37B7B"
+    }
   ],
   "cards": [
     {
       "id": "1",
-      "column": "in-progress",
+      "column": "done",
       "title": "Kanban board polish",
       "owner": "Alex",
       "project": "alex-ops",
       "priority": "high",
-      "notes": "Building this right now. Enhanced UI, real tasks, proper deployment."
+      "notes": "Building this right now. Enhanced UI, real tasks, proper deployment.",
+      "completedAt": "2026-02-03"
     },
     {
       "id": "2",
@@ -223,5 +264,5 @@
       "completedAt": "2026-02-02"
     }
   ],
-  "lastUpdated": "2026-02-03T01:35:00Z"
+  "lastUpdated": "2026-02-03T01:39:22.781Z"
 }

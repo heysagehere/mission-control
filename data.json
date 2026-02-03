@@ -53,7 +53,8 @@
       "owner": "Iso",
       "project": "knowyurself",
       "priority": "high",
-      "notes": "Need account created + Meta Business Suite access for Alex"
+      "notes": "Need account created + Meta Business Suite access for Alex",
+      "today": true
     },
     {
       "id": "11",

@@ -53,6 +53,7 @@
       min-height: 100dvh;
       line-height: 1.5;
       font-size: 14px;
+      touch-action: manipulation;
     }
 
     header {
@@ -68,7 +69,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
 
     h1 {
@@ -91,11 +92,11 @@
     .icon-btn {
       background: var(--bg);
       border: 1px solid var(--border);
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       border-radius: 6px;
       cursor: pointer;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -103,29 +104,43 @@
       color: var(--text-muted);
     }
 
-    .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .icon-btn:hover, .icon-btn:active { 
+      border-color: var(--accent); 
+      color: var(--accent); 
+    }
 
+    /* BIGGER TABS */
     .tabs {
       display: flex;
-      gap: 0.25rem;
+      gap: 0.5rem;
       margin-bottom: 0.75rem;
     }
 
     .tab {
-      background: transparent;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-size: 0.8rem;
-      font-weight: 500;
+      flex: 1;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
       cursor: pointer;
       color: var(--text-muted);
-      border-radius: 6px;
+      border-radius: 8px;
       transition: all 0.15s;
       font-family: inherit;
+      text-align: center;
     }
 
-    .tab:hover { background: var(--bg); }
-    .tab.active { background: var(--accent); color: white; }
+    .tab:hover, .tab:active { 
+      border-color: var(--accent); 
+      color: var(--accent);
+    }
+    
+    .tab.active { 
+      background: var(--accent); 
+      color: white; 
+      border-color: var(--accent);
+    }
 
     .filters {
       display: flex;
@@ -136,9 +151,9 @@
     .filter-btn {
       background: var(--bg);
       border: 1px solid var(--border);
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.7rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.15s;
@@ -146,7 +161,7 @@
       color: var(--text-muted);
     }
 
-    .filter-btn:hover { border-color: var(--accent); }
+    .filter-btn:hover, .filter-btn:active { border-color: var(--accent); }
     .filter-btn.active {
       background: var(--accent);
       color: white;
@@ -170,7 +185,7 @@
     }
 
     .today-section h2 {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -183,34 +198,48 @@
     .today-card {
       background: var(--card-bg);
       border-radius: var(--radius);
-      padding: 0.85rem;
-      margin-bottom: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 0.6rem;
       box-shadow: var(--shadow);
       border-left: 3px solid var(--border);
+      position: relative;
     }
 
     .today-card.priority-high { border-left-color: var(--high); }
     .today-card.priority-medium { border-left-color: var(--medium); }
 
+    .today-card .remove-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: none;
+      border: none;
+      color: var(--text-light);
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0.25rem;
+      line-height: 1;
+    }
+
     .calendar-item {
       display: flex;
       gap: 0.75rem;
       align-items: flex-start;
-      padding: 0.6rem 0;
+      padding: 0.75rem 0;
       border-bottom: 1px solid var(--border);
     }
 
     .calendar-item:last-child { border-bottom: none; }
 
     .calendar-time {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      min-width: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      min-width: 55px;
     }
 
     .calendar-title {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
     }
 
     .empty-state {
@@ -225,8 +254,8 @@
       gap: 0.75rem;
       padding: 1rem;
       overflow-x: auto;
-      min-height: calc(100vh - 140px);
-      min-height: calc(100dvh - 140px);
+      min-height: calc(100vh - 160px);
+      min-height: calc(100dvh - 160px);
       align-items: flex-start;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
@@ -237,9 +266,9 @@
     }
 
     .column {
-      flex: 0 0 280px;
-      min-width: 260px;
-      max-width: 300px;
+      flex: 0 0 300px;
+      min-width: 280px;
+      max-width: 320px;
       background: var(--column-bg);
       border-radius: var(--radius);
       padding: 0.75rem;
@@ -251,9 +280,9 @@
 
     @media (max-width: 768px) {
       .column {
-        flex: 0 0 85vw;
-        min-width: 85vw;
-        max-width: 85vw;
+        flex: 0 0 88vw;
+        min-width: 88vw;
+        max-width: 88vw;
       }
     }
 
@@ -268,14 +297,14 @@
 
     .column-title {
       font-weight: 600;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.03em;
       color: var(--text-muted);
     }
 
     .column-count {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 500;
       color: var(--text-light);
     }
@@ -284,31 +313,37 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      min-height: 100px;
+      min-height: 80px;
+      transition: background 0.2s;
+      border-radius: var(--radius);
+      padding: 2px;
     }
 
     .cards.drag-over {
       background: var(--accent-light);
-      border-radius: var(--radius);
     }
 
     .card {
       background: var(--card-bg);
       border-radius: var(--radius);
-      padding: 0.75rem;
+      padding: 0.85rem;
       box-shadow: var(--shadow);
       transition: all 0.15s ease;
       border-left: 3px solid var(--border);
-      cursor: grab;
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
-    .card:hover {
+    .card:active {
+      transform: scale(0.98);
       box-shadow: var(--shadow-hover);
     }
 
     .card.dragging {
-      opacity: 0.5;
-      cursor: grabbing;
+      opacity: 0.4;
+      transform: scale(0.95);
     }
 
     .card.done-card {
@@ -327,8 +362,8 @@
 
     .card-title {
       font-weight: 500;
-      font-size: 0.85rem;
-      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
       line-height: 1.3;
     }
 
@@ -345,10 +380,10 @@
     }
 
     .tag {
-      font-size: 0.65rem;
+      font-size: 0.7rem;
       font-weight: 500;
-      padding: 0.1rem 0.35rem;
-      border-radius: 3px;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
       background: var(--bg);
       color: var(--text-muted);
     }
@@ -357,14 +392,46 @@
     .tag.medium { background: #FDF6E3; color: var(--medium); }
     .tag.low { background: #E8F4EA; color: var(--low); }
 
-    .card-notes {
-      font-size: 0.75rem;
+    /* Quick actions on cards */
+    .card-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-action {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
       color: var(--text-muted);
-      margin-top: 0.4rem;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .card-action:hover, .card-action:active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .card-notes {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
       line-height: 1.4;
       display: none;
     }
 
+    .card.expanded .card-notes,
+    .card.expanded .card-actions { display: flex; }
     .card.expanded .card-notes { display: block; }
 
     .refresh-indicator {
@@ -372,9 +439,9 @@
       bottom: 1rem;
       right: 1rem;
       background: var(--card-bg);
-      padding: 0.4rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.7rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
       color: var(--text-muted);
       box-shadow: var(--shadow);
       opacity: 0;
@@ -394,11 +461,75 @@
     }
 
     .hidden { display: none !important; }
+
+    /* Move modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 300;
+      padding: 1rem;
+    }
+
+    .modal {
+      background: var(--card-bg);
+      border-radius: 12px 12px 0 0;
+      width: 100%;
+      max-width: 400px;
+      padding: 1rem;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .modal h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .modal-option {
+      display: block;
+      width: 100%;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: left;
+      color: var(--text);
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .modal-option:hover, .modal-option:active {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    .modal-cancel {
+      display: block;
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: inherit;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
   <div id="app" class="loading">Loading...</div>
   <div id="refresh" class="refresh-indicator">Updated</div>
+  <div id="modal"></div>
 
   <script>
     const DATA_URL = 'data.json';
@@ -406,8 +537,7 @@
 
     let data = null;
     let activeFilter = 'all';
-    let activeTab = 'board'; // 'today' or 'board'
-    let draggedCard = null;
+    let activeTab = 'today';
 
     // Theme
     function initTheme() {
@@ -460,42 +590,123 @@
       return data.cards.filter(c => c.project === activeFilter);
     }
 
-    function getIsoTasks() {
+    function getIsoTodayTasks() {
+      return data.cards.filter(c => c.today === true && c.column !== 'done');
+    }
+
+    function getIsoUpcoming() {
       return data.cards.filter(c => 
         c.owner.toLowerCase() === 'iso' && 
         c.column !== 'done' &&
-        (c.column === 'up-next' || c.column === 'in-progress' || c.priority === 'high')
-      ).sort((a, b) => {
-        const prio = { high: 0, medium: 1, low: 2 };
-        return (prio[a.priority] || 1) - (prio[b.priority] || 1);
-      });
+        !c.today &&
+        (c.column === 'up-next' || c.priority === 'high')
+      ).slice(0, 5);
+    }
+
+    // Move card
+    function showMoveModal(cardId) {
+      const card = data.cards.find(c => c.id === cardId);
+      if (!card) return;
+
+      const columns = data.columns.filter(c => c.id !== card.column);
+      
+      document.getElementById('modal').innerHTML = `
+        <div class="modal-overlay" onclick="closeModal(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <h3>Move "${card.title}"</h3>
+            ${columns.map(col => `
+              <button class="modal-option" onclick="moveCard('${cardId}', '${col.id}')">${col.title}</button>
+            `).join('')}
+            <button class="modal-option" onclick="toggleToday('${cardId}')" style="border-color: var(--accent)">
+              ${card.today ? 'Remove from Today' : 'Add to Today'}
+            </button>
+            <button class="modal-cancel" onclick="closeModal()">Cancel</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function closeModal(e) {
+      if (!e || e.target.classList.contains('modal-overlay')) {
+        document.getElementById('modal').innerHTML = '';
+      }
+    }
+
+    function moveCard(cardId, newColumn) {
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.column = newColumn;
+        if (newColumn === 'done') {
+          card.completedAt = new Date().toISOString().split('T')[0];
+          card.today = false;
+        }
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator('Moved');
+        closeModal();
+        render();
+      }
+    }
+
+    function toggleToday(cardId) {
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.today = !card.today;
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator(card.today ? 'Added to Today' : 'Removed');
+        closeModal();
+        render();
+      }
+    }
+
+    function removeFromToday(cardId) {
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.today = false;
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator('Removed');
+        render();
+      }
     }
 
     function renderTodayView() {
-      const isoTasks = getIsoTasks();
+      const todayTasks = getIsoTodayTasks();
+      const upcoming = getIsoUpcoming();
       const calendar = data.calendar || [];
 
       return `
         <div class="today-view">
           <div class="today-section">
-            <h2>Today's Focus</h2>
-            ${isoTasks.length ? isoTasks.map(card => `
+            <h2>Today's Focus (${todayTasks.length})</h2>
+            ${todayTasks.length ? todayTasks.map(card => `
               <div class="today-card priority-${card.priority || 'medium'}">
+                <button class="remove-btn" onclick="removeFromToday('${card.id}')" title="Remove">×</button>
                 <div class="card-project">${getProjectName(card.project)}</div>
                 <div class="card-title">${card.title}</div>
-                ${card.notes ? `<div class="card-notes" style="display:block">${card.notes}</div>` : ''}
+                ${card.notes ? `<div class="card-notes" style="display:block;margin-top:0.5rem">${card.notes}</div>` : ''}
               </div>
-            `).join('') : '<div class="empty-state">Nothing urgent. Nice.</div>'}
+            `).join('') : '<div class="empty-state">Tap cards in Board view to add tasks here</div>'}
           </div>
           
           <div class="today-section">
             <h2>Calendar</h2>
-            ${calendar.length ? calendar.map(item => `
-              <div class="calendar-item">
-                <div class="calendar-time">${item.time}</div>
-                <div class="calendar-title">${item.title}</div>
+            ${calendar.length ? `<div style="background:var(--card-bg);border-radius:var(--radius);padding:0.5rem 1rem;box-shadow:var(--shadow)">
+              ${calendar.map(item => `
+                <div class="calendar-item">
+                  <div class="calendar-time">${item.time}</div>
+                  <div class="calendar-title">${item.title}</div>
+                </div>
+              `).join('')}
+            </div>` : '<div class="empty-state">No events today</div>'}
+          </div>
+
+          <div class="today-section">
+            <h2>Up Next</h2>
+            ${upcoming.length ? upcoming.map(card => `
+              <div class="today-card priority-${card.priority || 'medium'}" onclick="toggleToday('${card.id}')" style="cursor:pointer">
+                <div class="card-project">${getProjectName(card.project)} · tap to add</div>
+                <div class="card-title">${card.title}</div>
               </div>
-            `).join('') : '<div class="empty-state">No events today</div>'}
+            `).join('') : '<div class="empty-state">Nothing urgent</div>'}
           </div>
         </div>
       `;
@@ -513,17 +724,15 @@
           const isDone = col.id === 'done';
           
           return `
-            <div class="card ${isDone ? 'done-card' : ''}" 
-                 draggable="true" 
+            <div class="card ${isDone ? 'done-card' : ''} ${card.today ? 'today-flagged' : ''}" 
                  data-id="${card.id}"
-                 onclick="this.classList.toggle('expanded')">
-              <div class="card-project">${projectName}</div>
+                 onclick="showMoveModal('${card.id}')">
+              <div class="card-project">${projectName}${card.today ? ' · TODAY' : ''}</div>
               <div class="card-title">${card.title}</div>
               <div class="card-meta">
                 <span class="tag">${card.owner}</span>
                 ${card.priority ? `<span class="tag ${card.priority}">${card.priority}</span>` : ''}
               </div>
-              ${card.notes ? `<div class="card-notes">${card.notes}</div>` : ''}
             </div>
           `;
         }).join('');
@@ -534,7 +743,7 @@
               <span class="column-title">${col.title}</span>
               <span class="column-count">${cards.length}</span>
             </div>
-            <div class="cards" data-column="${col.id}">${cardsHtml}</div>
+            <div class="cards">${cardsHtml || '<div class="empty-state" style="padding:1rem">Empty</div>'}</div>
           </div>
         `;
       }).join('');
@@ -546,13 +755,15 @@
       const app = document.getElementById('app');
       const isDark = document.documentElement.dataset.theme === 'dark';
 
-      // Counts for filters
+      // Counts
       const activeCards = data.cards.filter(c => c.column !== 'done');
       const ownerCounts = {};
       activeCards.forEach(c => {
         const owner = c.owner.toLowerCase();
         ownerCounts[owner] = (ownerCounts[owner] || 0) + 1;
       });
+
+      const todayCount = data.cards.filter(c => c.today && c.column !== 'done').length;
 
       const filtersHtml = `
         <button class="filter-btn ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">
@@ -580,8 +791,12 @@
             </div>
           </div>
           <div class="tabs">
-            <button class="tab ${activeTab === 'today' ? 'active' : ''}" data-tab="today">Iso's Day</button>
-            <button class="tab ${activeTab === 'board' ? 'active' : ''}" data-tab="board">Board</button>
+            <button class="tab ${activeTab === 'today' ? 'active' : ''}" data-tab="today">
+              Today${todayCount ? ` (${todayCount})` : ''}
+            </button>
+            <button class="tab ${activeTab === 'board' ? 'active' : ''}" data-tab="board">
+              Board
+            </button>
           </div>
           <div class="filters ${activeTab === 'today' ? 'hidden' : ''}">${filtersHtml}</div>
         </header>
@@ -602,69 +817,6 @@
         btn.addEventListener('click', () => {
           activeFilter = btn.dataset.filter;
           render();
-        });
-      });
-
-      // Drag and drop
-      setupDragDrop();
-    }
-
-    function setupDragDrop() {
-      const cards = document.querySelectorAll('.card[draggable]');
-      const dropZones = document.querySelectorAll('.cards');
-
-      cards.forEach(card => {
-        card.addEventListener('dragstart', (e) => {
-          draggedCard = card;
-          card.classList.add('dragging');
-          e.dataTransfer.effectAllowed = 'move';
-        });
-
-        card.addEventListener('dragend', () => {
-          card.classList.remove('dragging');
-          dropZones.forEach(zone => zone.classList.remove('drag-over'));
-          draggedCard = null;
-        });
-      });
-
-      dropZones.forEach(zone => {
-        zone.addEventListener('dragover', (e) => {
-          e.preventDefault();
-          e.dataTransfer.dropEffect = 'move';
-          zone.classList.add('drag-over');
-        });
-
-        zone.addEventListener('dragleave', () => {
-          zone.classList.remove('drag-over');
-        });
-
-        zone.addEventListener('drop', (e) => {
-          e.preventDefault();
-          zone.classList.remove('drag-over');
-          
-          if (draggedCard) {
-            const cardId = draggedCard.dataset.id;
-            const newColumn = zone.dataset.column;
-            
-            // Update local data
-            const card = data.cards.find(c => c.id === cardId);
-            if (card && card.column !== newColumn) {
-              card.column = newColumn;
-              if (newColumn === 'done') {
-                card.completedAt = new Date().toISOString().split('T')[0];
-              }
-              data.lastUpdated = new Date().toISOString();
-              
-              // Show feedback
-              showRefreshIndicator('Moved (sync pending)');
-              
-              // Re-render
-              render();
-              
-              // Note: In a real app, this would sync to server
-              console.log(`Move card ${cardId} to ${newColumn}`);
-            }
-          }
         });
       });
     }
@@ -690,11 +842,6 @@
     async function init() {
       data = await fetchData();
       if (data) {
-        // Check if coming from "today" preference
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('view') === 'today') {
-          activeTab = 'today';
-        }
         render();
         setInterval(checkForUpdates, REFRESH_INTERVAL);
       } else {

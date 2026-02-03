@@ -29,6 +29,20 @@
       --radius: 12px;
     }
 
+    [data-theme="dark"] {
+      --bg: #1A1918;
+      --card-bg: #2A2826;
+      --text: #F0EDE8;
+      --text-muted: #9B9590;
+      --text-light: #6B6560;
+      --border: #3A3836;
+      --column-bg: rgba(42, 40, 38, 0.8);
+      --blocked-bg: rgba(60, 45, 35, 0.8);
+      --done-bg: rgba(35, 50, 40, 0.8);
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -66,6 +80,24 @@
     .last-updated {
       font-size: 0.75rem;
       color: var(--text-muted);
+    }
+
+    .theme-toggle {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
     }
 
     .filters {
@@ -324,6 +356,24 @@
     let data = null;
     let activeFilter = 'all';
 
+    // Theme handling
+    function initTheme() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.dataset.theme === 'dark';
+      document.documentElement.dataset.theme = isDark ? '' : 'dark';
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      render();
+    }
+
+    initTheme();
+
     async function fetchData() {
       try {
         const res = await fetch(DATA_URL + '?t=' + Date.now());
@@ -449,7 +499,12 @@
         <header>
           <div class="header-top">
             <h1>Mission Control</h1>
-            <div class="last-updated">${formatTime(data.lastUpdated)}</div>
+            <div style="display:flex;align-items:center;gap:0.75rem">
+              <div class="last-updated">${formatTime(data.lastUpdated)}</div>
+              <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
+                ${document.documentElement.dataset.theme === 'dark' ? '☀️' : '🌙'}
+              </button>
+            </div>
           </div>
           <div class="filters">${filtersHtml}</div>
         </header>

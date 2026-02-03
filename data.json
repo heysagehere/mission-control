@@ -1,75 +1,227 @@
 {
   "columns": [
-    {
-      "id": "backlog",
-      "title": "Backlog",
-      "emoji": "📋"
-    },
-    {
-      "id": "up-next",
-      "title": "Up Next",
-      "emoji": "🎯"
-    },
-    {
-      "id": "in-progress",
-      "title": "In Progress",
-      "emoji": "🔨"
-    },
-    {
-      "id": "done",
-      "title": "Done",
-      "emoji": "✅"
-    }
+    { "id": "backlog", "title": "Backlog", "emoji": "📋" },
+    { "id": "up-next", "title": "Up Next", "emoji": "🎯" },
+    { "id": "in-progress", "title": "In Progress", "emoji": "🔨" },
+    { "id": "blocked", "title": "Blocked", "emoji": "⏸️" },
+    { "id": "done", "title": "Done", "emoji": "✅" }
+  ],
+  "projects": [
+    { "id": "forage-bali", "name": "Forage Bali", "color": "#7B9E6B" },
+    { "id": "knowyurself", "name": "KnowYurself", "color": "#8B9DC3" },
+    { "id": "fridays-at-four", "name": "Fridays at Four", "color": "#E07A3D" },
+    { "id": "alex-ops", "name": "Alex Ops", "color": "#9B7BC3" },
+    { "id": "personal", "name": "Personal", "color": "#C37B7B" }
   ],
   "cards": [
     {
       "id": "1",
       "column": "in-progress",
-      "title": "Build kanban prototype",
+      "title": "Kanban board polish",
       "owner": "Alex",
+      "project": "alex-ops",
       "priority": "high",
-      "notes": "F@4 aesthetic, mobile-first, auto-updates"
+      "notes": "Building this right now. Enhanced UI, real tasks, proper deployment."
     },
     {
       "id": "2",
       "column": "up-next",
-      "title": "System migration plan",
+      "title": "System migration",
       "owner": "Alex",
+      "project": "alex-ops",
       "priority": "medium",
-      "notes": "Clean reinstall, keep memories & skills"
+      "notes": "Clean reinstall, keep memories & skills. After Iso lands."
     },
     {
       "id": "3",
       "column": "up-next",
       "title": "Set up Babel properly",
       "owner": "Alex",
+      "project": "alex-ops",
       "priority": "medium",
-      "notes": "Fresh start with clean baseline"
+      "notes": "Fresh baseline, proper SOUL.md, first tweet."
     },
     {
-      "id": "4",
-      "column": "backlog",
-      "title": "Forage Bali website",
+      "id": "10",
+      "column": "blocked",
+      "title": "Create @knowyurself Instagram",
       "owner": "Iso",
+      "project": "knowyurself",
+      "priority": "high",
+      "notes": "Need account created + Meta Business Suite access for Alex"
+    },
+    {
+      "id": "11",
+      "column": "up-next",
+      "title": "Test Gemini image generation",
+      "owner": "Alex",
+      "project": "knowyurself",
       "priority": "medium",
-      "notes": "foragebali.com development"
+      "notes": "Create template prompts for consistent quote image style"
     },
     {
-      "id": "5",
+      "id": "12",
       "column": "backlog",
-      "title": "KnowYurself Instagram content",
-      "owner": "Both",
-      "priority": "low",
-      "notes": "Content strategy & automation"
+      "title": "Build bank of 20+ quote images",
+      "owner": "Alex",
+      "project": "knowyurself",
+      "priority": "medium",
+      "notes": "For Know Yourself Instagram content"
     },
     {
-      "id": "6",
+      "id": "13",
+      "column": "backlog",
+      "title": "Set up Instagram scheduling tool",
+      "owner": "Alex",
+      "project": "knowyurself",
+      "priority": "low",
+      "notes": "For automated posting once content is ready"
+    },
+    {
+      "id": "14",
+      "column": "backlog",
+      "title": "Create ad creatives",
+      "owner": "Alex",
+      "project": "knowyurself",
+      "priority": "low",
+      "notes": "For Know Yourself ads — after organic content proves itself"
+    },
+    {
+      "id": "20",
+      "column": "up-next",
+      "title": "Classes page",
+      "owner": "Both",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "One class, booking, pictures, pretty words. April 24 with Made."
+    },
+    {
+      "id": "21",
+      "column": "backlog",
+      "title": "Hero video edit",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Send footage to Fiverr guy ($50)"
+    },
+    {
+      "id": "22",
+      "column": "blocked",
+      "title": "Rezdy booking setup",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Carla sets up — waiting on class details"
+    },
+    {
+      "id": "23",
+      "column": "blocked",
+      "title": "WhatsApp Business setup",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Yuka manages — for booking inquiries"
+    },
+    {
+      "id": "24",
+      "column": "backlog",
+      "title": "Legal research",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "License, permits, food handling, liability, insurance"
+    },
+    {
+      "id": "25",
+      "column": "backlog",
+      "title": "Partnership contract with Yuka",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Profit split, roles, responsibilities"
+    },
+    {
+      "id": "26",
+      "column": "backlog",
+      "title": "Teacher agreement with Made",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "50% all-in arrangement"
+    },
+    {
+      "id": "27",
+      "column": "backlog",
+      "title": "About page updates",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Yuka: I Gusti Ayu Karang, born Sidemen. Made bio."
+    },
+    {
+      "id": "28",
+      "column": "backlog",
+      "title": "Hotel pamphlets",
+      "owner": "Both",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "'What to forage in Bali' pamphlets for hotel distribution"
+    },
+    {
+      "id": "29",
+      "column": "backlog",
+      "title": "Email to list",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Announce Forage Bali to forageSF email list"
+    },
+    {
+      "id": "30",
+      "column": "backlog",
+      "title": "Waitlist + MailChimp",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Create waitlist, signup form on website"
+    },
+    {
+      "id": "40",
+      "column": "backlog",
+      "title": "YouTube content calendar",
+      "owner": "Iso",
+      "project": "fridays-at-four",
+      "priority": "low",
+      "notes": "With Nick for editing"
+    },
+    {
+      "id": "41",
+      "column": "backlog",
+      "title": "Scope Carla agent",
+      "owner": "Iso",
+      "project": "alex-ops",
+      "priority": "low",
+      "notes": "What does Carla need? Choose platform."
+    },
+    {
+      "id": "50",
       "column": "backlog",
       "title": "2026 goals document",
       "owner": "Iso",
+      "project": "personal",
       "priority": "medium",
-      "notes": "Write up yearly goals"
+      "notes": "Write up yearly goals and vision"
+    },
+    {
+      "id": "51",
+      "column": "done",
+      "title": "Flight check-in",
+      "owner": "Alex",
+      "project": "personal",
+      "priority": "high",
+      "notes": "VN168 SGN→HAN 10:10 AM Feb 3 ✓",
+      "completedAt": "2026-02-02"
     }
   ],
-  "lastUpdated": "2026-02-03T01:30:00Z"
+  "lastUpdated": "2026-02-03T01:35:00Z"
 }

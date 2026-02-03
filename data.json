@@ -14,8 +14,11 @@
     { "id": "personal", "name": "Personal", "color": "#C37B7B" }
   ],
   "calendar": [
-    { "time": "10:10", "title": "Flight VN168 SGN → HAN" },
-    { "time": "19:00", "title": "Motorbike pick up" }
+    { "time": "10:00", "title": "Nick call" },
+    { "time": "11:00", "title": "Holly/Iso" },
+    { "time": "13:00", "title": "Reach out to people" },
+    { "time": "PM", "title": "Move to new hotel" },
+    { "time": "18:00", "title": "Men's group at KAFE" }
   ],
   "cards": [
     {
@@ -30,40 +33,33 @@
     },
     {
       "id": "2",
-      "column": "up-next",
-      "title": "System migration",
+      "column": "done",
+      "title": "Install new skills",
       "owner": "Alex",
       "project": "alex-ops",
       "priority": "medium",
-      "notes": "Clean reinstall, keep memories & skills. After Iso lands."
-    },
-    {
-      "id": "3",
-      "column": "up-next",
-      "title": "Set up Babel properly",
-      "owner": "Alex",
-      "project": "alex-ops",
-      "priority": "medium",
-      "notes": "Fresh baseline, proper SOUL.md, first tweet."
+      "notes": "nano-banana-pro, veo, cursor-agent, xai",
+      "completedAt": "2026-02-03"
     },
     {
       "id": "10",
-      "column": "blocked",
-      "title": "Create @knowyurself Instagram",
+      "column": "up-next",
+      "title": "Set up @knowyurself Instagram",
       "owner": "Iso",
       "project": "knowyurself",
       "priority": "high",
-      "notes": "Need account created + Meta Business Suite access for Alex",
+      "notes": "Create account + give Alex Meta Business Suite access",
       "today": true
     },
     {
       "id": "11",
-      "column": "up-next",
-      "title": "Test Gemini image generation",
+      "column": "in-progress",
+      "title": "Instagram content strategy research",
       "owner": "Alex",
       "project": "knowyurself",
-      "priority": "medium",
-      "notes": "Create template prompts for consistent quote image style"
+      "priority": "high",
+      "notes": "Deep dive on 15-20 self-growth/relationship accounts. Report: research/instagram-selfgrowth-analysis.md",
+      "today": true
     },
     {
       "id": "12",
@@ -94,21 +90,22 @@
     },
     {
       "id": "20",
-      "column": "up-next",
+      "column": "blocked",
       "title": "Classes page",
       "owner": "Both",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "One class, booking, pictures, pretty words. April 24 with Made."
+      "notes": "Waiting on Made to get back to us"
     },
     {
       "id": "21",
-      "column": "backlog",
+      "column": "up-next",
       "title": "Hero video edit",
       "owner": "Iso",
       "project": "forage-bali",
-      "priority": "medium",
-      "notes": "Send footage to Fiverr guy ($50)"
+      "priority": "high",
+      "notes": "Review footage, write rough instructions for Fiverr editor ($50)",
+      "today": true
     },
     {
       "id": "22",
@@ -121,12 +118,13 @@
     },
     {
       "id": "23",
-      "column": "blocked",
-      "title": "WhatsApp Business setup",
-      "owner": "Yuka",
+      "column": "up-next",
+      "title": "WhatsApp Business research",
+      "owner": "Alex",
       "project": "forage-bali",
-      "priority": "medium",
-      "notes": "Yuka manages — for booking inquiries"
+      "priority": "high",
+      "notes": "SIM requirements, multi-device access, costs, best setup for Forage Bali",
+      "today": true
     },
     {
       "id": "24",
@@ -157,12 +155,12 @@
     },
     {
       "id": "27",
-      "column": "backlog",
+      "column": "blocked",
       "title": "About page updates",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "low",
-      "notes": "Yuka: I Gusti Ayu Karang, born Sidemen. Made bio."
+      "notes": "Waiting on Made for bio info"
     },
     {
       "id": "28",
@@ -193,12 +191,13 @@
     },
     {
       "id": "40",
-      "column": "backlog",
-      "title": "YouTube content calendar",
-      "owner": "Iso",
+      "column": "up-next",
+      "title": "YouTube video structure",
+      "owner": "Both",
       "project": "fridays-at-four",
-      "priority": "low",
-      "notes": "With Nick for editing"
+      "priority": "medium",
+      "notes": "Plan format, content calendar with Nick. Alex prepping research.",
+      "today": true
     },
     {
       "id": "41",
@@ -235,8 +234,19 @@
       "owner": "Both",
       "project": "alex-ops",
       "priority": "medium",
-      "notes": "Git clone install, migrate memories/skills, set up Babel in Docker. Plan: memory/procedural/fresh-install-plan.md"
+      "notes": "Git clone install, migrate memories/skills, set up Babel in Docker. Plan ready.",
+      "today": true
+    },
+    {
+      "id": "53",
+      "column": "up-next",
+      "title": "Move to new hotel",
+      "owner": "Iso",
+      "project": "personal",
+      "priority": "high",
+      "notes": "Afternoon - check out of Uma Wana Sara",
+      "today": true
     }
   ],
-  "lastUpdated": "2026-02-03T13:17:00Z"
+  "lastUpdated": "2026-02-03T14:24:00Z"
 }

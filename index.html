@@ -4,43 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Mission Control</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◉</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FDF8F3;
+      --bg: #F8F7F5;
       --card-bg: #FFFFFF;
-      --text: #2D2A26;
-      --text-muted: #6B6560;
-      --text-light: #9B9590;
-      --accent: #E07A3D;
-      --accent-light: #FFF0E8;
-      --border: #E8E2DC;
-      --column-bg: rgba(255, 255, 255, 0.6);
-      --blocked-bg: rgba(255, 240, 230, 0.6);
-      --done-bg: rgba(240, 248, 240, 0.6);
-      --high: #D64545;
-      --medium: #E07A3D;
-      --low: #7B9E6B;
-      --shadow: 0 2px 8px rgba(45, 42, 38, 0.08);
-      --shadow-hover: 0 4px 16px rgba(45, 42, 38, 0.12);
-      --radius: 12px;
+      --text: #1A1A1A;
+      --text-muted: #666;
+      --text-light: #999;
+      --accent: #2D5A27;
+      --accent-light: #E8F0E7;
+      --border: #E5E3DF;
+      --column-bg: #EFEEEC;
+      --blocked-bg: #F5EDEA;
+      --done-bg: #EDF5EC;
+      --high: #C13A3A;
+      --medium: #B8860B;
+      --low: #2D5A27;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.1);
+      --radius: 8px;
     }
 
     [data-theme="dark"] {
-      --bg: #1A1918;
-      --card-bg: #2A2826;
-      --text: #F0EDE8;
-      --text-muted: #9B9590;
-      --text-light: #6B6560;
-      --border: #3A3836;
-      --column-bg: rgba(42, 40, 38, 0.8);
-      --blocked-bg: rgba(60, 45, 35, 0.8);
-      --done-bg: rgba(35, 50, 40, 0.8);
-      --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
+      --bg: #141414;
+      --card-bg: #1E1E1E;
+      --text: #E8E8E8;
+      --text-muted: #999;
+      --text-light: #666;
+      --border: #2A2A2A;
+      --column-bg: #1A1A1A;
+      --blocked-bg: #1F1A18;
+      --done-bg: #181F18;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.4);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -52,7 +52,7 @@
       min-height: 100vh;
       min-height: 100dvh;
       line-height: 1.5;
-      overflow-x: hidden;
+      font-size: 14px;
     }
 
     header {
@@ -72,49 +72,76 @@
     }
 
     h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .last-updated {
-      font-size: 0.75rem;
-      color: var(--text-muted);
+      font-size: 0.7rem;
+      color: var(--text-light);
     }
 
-    .theme-toggle {
+    .icon-btn {
       background: var(--bg);
       border: 1px solid var(--border);
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 0.8rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.2s;
+      transition: all 0.15s;
+      color: var(--text-muted);
     }
 
-    .theme-toggle:hover {
-      border-color: var(--accent);
+    .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .tabs {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 0.75rem;
     }
+
+    .tab {
+      background: transparent;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text-muted);
+      border-radius: 6px;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+
+    .tab:hover { background: var(--bg); }
+    .tab.active { background: var(--accent); color: white; }
 
     .filters {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.4rem;
       flex-wrap: wrap;
     }
 
     .filter-btn {
       background: var(--bg);
       border: 1px solid var(--border);
-      padding: 0.35rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
       font-weight: 500;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.15s;
       font-family: inherit;
       color: var(--text-muted);
     }
@@ -127,41 +154,95 @@
     }
 
     .filter-btn .count {
-      background: rgba(255,255,255,0.3);
-      padding: 0.1rem 0.4rem;
-      border-radius: 10px;
-      margin-left: 0.3rem;
-      font-size: 0.65rem;
+      opacity: 0.7;
+      margin-left: 0.2rem;
     }
 
-    .filter-btn.active .count {
-      background: rgba(255,255,255,0.25);
+    /* Today View */
+    .today-view {
+      padding: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
+    .today-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .today-section h2 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .today-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      margin-bottom: 0.5rem;
+      box-shadow: var(--shadow);
+      border-left: 3px solid var(--border);
+    }
+
+    .today-card.priority-high { border-left-color: var(--high); }
+    .today-card.priority-medium { border-left-color: var(--medium); }
+
+    .calendar-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .calendar-item:last-child { border-bottom: none; }
+
+    .calendar-time {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      min-width: 50px;
+    }
+
+    .calendar-title {
+      font-size: 0.85rem;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+    }
+
+    /* Board View */
     .board {
       display: flex;
-      gap: 1rem;
+      gap: 0.75rem;
       padding: 1rem;
       overflow-x: auto;
-      min-height: calc(100vh - 120px);
-      min-height: calc(100dvh - 120px);
+      min-height: calc(100vh - 140px);
+      min-height: calc(100dvh - 140px);
       align-items: flex-start;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
 
     @media (max-width: 768px) {
-      .board { padding: 0.75rem; gap: 0.75rem; }
+      .board { padding: 0.75rem; gap: 0.5rem; }
     }
 
     .column {
-      flex: 0 0 300px;
-      min-width: 280px;
-      max-width: 320px;
+      flex: 0 0 280px;
+      min-width: 260px;
+      max-width: 300px;
       background: var(--column-bg);
       border-radius: var(--radius);
       padding: 0.75rem;
-      backdrop-filter: blur(10px);
       scroll-snap-align: start;
     }
 
@@ -179,61 +260,75 @@
     .column-header {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
-      margin-bottom: 0.75rem;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
-    .column-emoji { font-size: 1.1rem; }
-    .column-title { font-weight: 600; font-size: 0.9rem; }
-    .column-count {
-      margin-left: auto;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-size: 0.7rem;
+    .column-title {
       font-weight: 600;
-      padding: 0.15rem 0.4rem;
-      border-radius: 20px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--text-muted);
     }
 
-    .cards { display: flex; flex-direction: column; gap: 0.6rem; }
+    .column-count {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      min-height: 100px;
+    }
+
+    .cards.drag-over {
+      background: var(--accent-light);
+      border-radius: var(--radius);
+    }
 
     .card {
       background: var(--card-bg);
       border-radius: var(--radius);
-      padding: 0.85rem;
+      padding: 0.75rem;
       box-shadow: var(--shadow);
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       border-left: 3px solid var(--border);
-      cursor: pointer;
+      cursor: grab;
     }
 
     .card:hover {
       box-shadow: var(--shadow-hover);
-      transform: translateY(-1px);
+    }
+
+    .card.dragging {
+      opacity: 0.5;
+      cursor: grabbing;
     }
 
     .card.done-card {
-      opacity: 0.7;
+      opacity: 0.6;
       border-left-color: var(--low);
     }
 
     .card-project {
       font-size: 0.65rem;
-      font-weight: 600;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.4rem;
-      display: inline-block;
-      padding: 0.1rem 0.4rem;
-      border-radius: 4px;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.3rem;
+      color: var(--text-light);
     }
 
     .card-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
+      font-weight: 500;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
       line-height: 1.3;
     }
 
@@ -245,72 +340,45 @@
     .card-meta {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.3rem;
       flex-wrap: wrap;
     }
 
-    .owner {
-      font-size: 0.7rem;
+    .tag {
+      font-size: 0.65rem;
       font-weight: 500;
-      padding: 0.15rem 0.4rem;
-      border-radius: 4px;
-    }
-
-    .owner.alex { background: #E8F4EA; color: #4A7C59; }
-    .owner.iso { background: #E8EDF4; color: #4A5C7C; }
-    .owner.both { background: #F4E8F0; color: #7C4A6A; }
-    .owner.carla { background: #FFF4E8; color: #7C5C4A; }
-    .owner.yuka { background: #E8F0F4; color: #4A6A7C; }
-    .owner.nick { background: #F0E8F4; color: #6A4A7C; }
-
-    .priority {
-      font-size: 0.6rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
       padding: 0.1rem 0.35rem;
       border-radius: 3px;
+      background: var(--bg);
+      color: var(--text-muted);
     }
 
-    .priority.high { background: #FDE8E8; color: var(--high); }
-    .priority.medium { background: #FFF0E8; color: var(--medium); }
-    .priority.low { background: #E8F4EA; color: var(--low); }
+    .tag.high { background: #FDE8E8; color: var(--high); }
+    .tag.medium { background: #FDF6E3; color: var(--medium); }
+    .tag.low { background: #E8F4EA; color: var(--low); }
 
     .card-notes {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
-      margin-top: 0.5rem;
+      margin-top: 0.4rem;
       line-height: 1.4;
       display: none;
     }
 
     .card.expanded .card-notes { display: block; }
 
-    .card-expand {
-      font-size: 0.7rem;
-      color: var(--text-light);
-      margin-top: 0.4rem;
-    }
-
-    .empty-state {
-      text-align: center;
-      padding: 1.5rem 0.75rem;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
     .refresh-indicator {
       position: fixed;
       bottom: 1rem;
       right: 1rem;
       background: var(--card-bg);
-      padding: 0.5rem 0.75rem;
-      border-radius: 20px;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
       font-size: 0.7rem;
       color: var(--text-muted);
       box-shadow: var(--shadow);
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.2s;
       z-index: 200;
     }
 
@@ -322,32 +390,15 @@
       align-items: center;
       height: 100vh;
       height: 100dvh;
-      font-size: 1rem;
       color: var(--text-muted);
     }
 
-    .stats {
-      display: flex;
-      gap: 1rem;
-      padding: 0.75rem 1rem;
-      background: var(--card-bg);
-      border-bottom: 1px solid var(--border);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      overflow-x: auto;
-    }
-
-    .stat { white-space: nowrap; }
-    .stat-value { font-weight: 600; color: var(--text); }
-
-    @media (max-width: 768px) {
-      .stats { padding: 0.5rem 0.75rem; gap: 0.75rem; }
-    }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
   <div id="app" class="loading">Loading...</div>
-  <div id="refresh" class="refresh-indicator">✓ Updated</div>
+  <div id="refresh" class="refresh-indicator">Updated</div>
 
   <script>
     const DATA_URL = 'data.json';
@@ -355,8 +406,10 @@
 
     let data = null;
     let activeFilter = 'all';
+    let activeTab = 'board'; // 'today' or 'board'
+    let draggedCard = null;
 
-    // Theme handling
+    // Theme
     function initTheme() {
       const saved = localStorage.getItem('theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -374,27 +427,6 @@
 
     initTheme();
 
-    // Check for quick-add via URL params
-    // e.g., ?add=Task+title&owner=Alex&project=alex-ops
-    function checkUrlParams() {
-      const params = new URLSearchParams(window.location.search);
-      if (params.has('add')) {
-        const task = {
-          title: params.get('add'),
-          owner: params.get('owner') || 'Alex',
-          project: params.get('project') || 'alex-ops',
-          priority: params.get('priority') || 'medium',
-          notes: params.get('notes') || ''
-        };
-        // Show modal with task info (for now just alert)
-        alert(`Quick add requested:\n\n"${task.title}"\n\nTo add this task, ask Alex or use the CLI.`);
-        // Clear params
-        window.history.replaceState({}, '', window.location.pathname);
-      }
-    }
-
-    checkUrlParams();
-
     async function fetchData() {
       try {
         const res = await fetch(DATA_URL + '?t=' + Date.now());
@@ -409,19 +441,14 @@
       const date = new Date(iso);
       const now = new Date();
       const diff = now - date;
-      if (diff < 60000) return 'just now';
-      if (diff < 3600000) return Math.floor(diff / 60000) + 'm ago';
-      if (diff < 86400000) return Math.floor(diff / 3600000) + 'h ago';
+      if (diff < 60000) return 'now';
+      if (diff < 3600000) return Math.floor(diff / 60000) + 'm';
+      if (diff < 86400000) return Math.floor(diff / 3600000) + 'h';
       return date.toLocaleDateString();
     }
 
-    function getProjectColor(projectId) {
-      const project = data.projects.find(p => p.id === projectId);
-      return project ? project.color : '#999';
-    }
-
     function getProjectName(projectId) {
-      const project = data.projects.find(p => p.id === projectId);
+      const project = data.projects?.find(p => p.id === projectId);
       return project ? project.name : projectId;
     }
 
@@ -433,124 +460,218 @@
       return data.cards.filter(c => c.project === activeFilter);
     }
 
-    function render() {
-      const app = document.getElementById('app');
-      const filteredCards = getFilteredCards();
-      
-      // Stats
-      const totalActive = data.cards.filter(c => c.column !== 'done').length;
-      const inProgress = data.cards.filter(c => c.column === 'in-progress').length;
-      const blocked = data.cards.filter(c => c.column === 'blocked').length;
-      const done = data.cards.filter(c => c.column === 'done').length;
-
-      // Project counts
-      const projectCounts = {};
-      data.cards.forEach(c => {
-        if (c.column !== 'done') {
-          projectCounts[c.project] = (projectCounts[c.project] || 0) + 1;
-        }
+    function getIsoTasks() {
+      return data.cards.filter(c => 
+        c.owner.toLowerCase() === 'iso' && 
+        c.column !== 'done' &&
+        (c.column === 'up-next' || c.column === 'in-progress' || c.priority === 'high')
+      ).sort((a, b) => {
+        const prio = { high: 0, medium: 1, low: 2 };
+        return (prio[a.priority] || 1) - (prio[b.priority] || 1);
       });
+    }
 
-      // Owner counts
-      const ownerCounts = {};
-      data.cards.forEach(c => {
-        if (c.column !== 'done') {
-          const owner = c.owner.toLowerCase();
-          ownerCounts[owner] = (ownerCounts[owner] || 0) + 1;
-        }
-      });
+    function renderTodayView() {
+      const isoTasks = getIsoTasks();
+      const calendar = data.calendar || [];
 
-      // Filters
-      const filtersHtml = `
-        <button class="filter-btn ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">
-          All<span class="count">${totalActive}</span>
-        </button>
-        ${data.projects.map(p => `
-          <button class="filter-btn ${activeFilter === p.id ? 'active' : ''}" data-filter="${p.id}" style="${activeFilter === p.id ? '' : `border-color: ${p.color}40`}">
-            ${p.name}${projectCounts[p.id] ? `<span class="count">${projectCounts[p.id]}</span>` : ''}
-          </button>
-        `).join('')}
-        <button class="filter-btn ${activeFilter === 'alex' ? 'active' : ''}" data-filter="alex">
-          Alex${ownerCounts.alex ? `<span class="count">${ownerCounts.alex}</span>` : ''}
-        </button>
-        <button class="filter-btn ${activeFilter === 'iso' ? 'active' : ''}" data-filter="iso">
-          Iso${ownerCounts.iso ? `<span class="count">${ownerCounts.iso}</span>` : ''}
-        </button>
+      return `
+        <div class="today-view">
+          <div class="today-section">
+            <h2>Today's Focus</h2>
+            ${isoTasks.length ? isoTasks.map(card => `
+              <div class="today-card priority-${card.priority || 'medium'}">
+                <div class="card-project">${getProjectName(card.project)}</div>
+                <div class="card-title">${card.title}</div>
+                ${card.notes ? `<div class="card-notes" style="display:block">${card.notes}</div>` : ''}
+              </div>
+            `).join('') : '<div class="empty-state">Nothing urgent. Nice.</div>'}
+          </div>
+          
+          <div class="today-section">
+            <h2>Calendar</h2>
+            ${calendar.length ? calendar.map(item => `
+              <div class="calendar-item">
+                <div class="calendar-time">${item.time}</div>
+                <div class="calendar-title">${item.title}</div>
+              </div>
+            `).join('') : '<div class="empty-state">No events today</div>'}
+          </div>
+        </div>
       `;
+    }
 
-      // Columns
+    function renderBoardView() {
+      const filteredCards = getFilteredCards();
+
       const columnsHtml = data.columns.map(col => {
         const cards = filteredCards.filter(c => c.column === col.id);
         const extraClass = col.id === 'blocked' ? 'blocked' : col.id === 'done' ? 'done' : '';
         
-        const cardsHtml = cards.length ? cards.map(card => {
-          const color = getProjectColor(card.project);
+        const cardsHtml = cards.map(card => {
           const projectName = getProjectName(card.project);
           const isDone = col.id === 'done';
           
           return `
-            <div class="card ${isDone ? 'done-card' : ''}" style="border-left-color: ${color}" onclick="this.classList.toggle('expanded')">
-              <div class="card-project" style="background: ${color}20; color: ${color}">${projectName}</div>
+            <div class="card ${isDone ? 'done-card' : ''}" 
+                 draggable="true" 
+                 data-id="${card.id}"
+                 onclick="this.classList.toggle('expanded')">
+              <div class="card-project">${projectName}</div>
               <div class="card-title">${card.title}</div>
               <div class="card-meta">
-                <span class="owner ${card.owner.toLowerCase()}">${card.owner}</span>
-                ${card.priority ? `<span class="priority ${card.priority}">${card.priority}</span>` : ''}
+                <span class="tag">${card.owner}</span>
+                ${card.priority ? `<span class="tag ${card.priority}">${card.priority}</span>` : ''}
               </div>
-              ${card.notes ? `
-                <div class="card-expand">tap to ${isDone ? 'see details' : 'expand'}</div>
-                <div class="card-notes">${card.notes}</div>
-              ` : ''}
+              ${card.notes ? `<div class="card-notes">${card.notes}</div>` : ''}
             </div>
           `;
-        }).join('') : '<div class="empty-state">Nothing here</div>';
+        }).join('');
 
         return `
-          <div class="column ${extraClass}">
+          <div class="column ${extraClass}" data-column="${col.id}">
             <div class="column-header">
-              <span class="column-emoji">${col.emoji}</span>
               <span class="column-title">${col.title}</span>
               <span class="column-count">${cards.length}</span>
             </div>
-            <div class="cards">${cardsHtml}</div>
+            <div class="cards" data-column="${col.id}">${cardsHtml}</div>
           </div>
         `;
       }).join('');
+
+      return `<div class="board">${columnsHtml}</div>`;
+    }
+
+    function render() {
+      const app = document.getElementById('app');
+      const isDark = document.documentElement.dataset.theme === 'dark';
+
+      // Counts for filters
+      const activeCards = data.cards.filter(c => c.column !== 'done');
+      const ownerCounts = {};
+      activeCards.forEach(c => {
+        const owner = c.owner.toLowerCase();
+        ownerCounts[owner] = (ownerCounts[owner] || 0) + 1;
+      });
+
+      const filtersHtml = `
+        <button class="filter-btn ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">
+          All <span class="count">${activeCards.length}</span>
+        </button>
+        <button class="filter-btn ${activeFilter === 'iso' ? 'active' : ''}" data-filter="iso">
+          Iso <span class="count">${ownerCounts.iso || 0}</span>
+        </button>
+        <button class="filter-btn ${activeFilter === 'alex' ? 'active' : ''}" data-filter="alex">
+          Alex <span class="count">${ownerCounts.alex || 0}</span>
+        </button>
+      `;
+
+      const mainContent = activeTab === 'today' ? renderTodayView() : renderBoardView();
 
       app.innerHTML = `
         <header>
           <div class="header-top">
             <h1>Mission Control</h1>
-            <div style="display:flex;align-items:center;gap:0.75rem">
-              <div class="last-updated">${formatTime(data.lastUpdated)}</div>
-              <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
-                ${document.documentElement.dataset.theme === 'dark' ? '☀️' : '🌙'}
+            <div class="header-actions">
+              <span class="last-updated">${formatTime(data.lastUpdated)}</span>
+              <button class="icon-btn" onclick="toggleTheme()" title="Toggle theme">
+                ${isDark ? '○' : '●'}
               </button>
             </div>
           </div>
-          <div class="filters">${filtersHtml}</div>
+          <div class="tabs">
+            <button class="tab ${activeTab === 'today' ? 'active' : ''}" data-tab="today">Iso's Day</button>
+            <button class="tab ${activeTab === 'board' ? 'active' : ''}" data-tab="board">Board</button>
+          </div>
+          <div class="filters ${activeTab === 'today' ? 'hidden' : ''}">${filtersHtml}</div>
         </header>
-        <div class="stats">
-          <div class="stat"><span class="stat-value">${inProgress}</span> in progress</div>
-          <div class="stat"><span class="stat-value">${blocked}</span> blocked</div>
-          <div class="stat"><span class="stat-value">${totalActive}</span> active</div>
-          <div class="stat"><span class="stat-value">${done}</span> done</div>
-        </div>
-        <div class="board">${columnsHtml}</div>
+        ${mainContent}
       `;
 
       app.classList.remove('loading');
 
-      // Filter click handlers
+      // Event listeners
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          activeTab = tab.dataset.tab;
+          render();
+        });
+      });
+
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           activeFilter = btn.dataset.filter;
           render();
         });
       });
+
+      // Drag and drop
+      setupDragDrop();
     }
 
-    function showRefreshIndicator() {
+    function setupDragDrop() {
+      const cards = document.querySelectorAll('.card[draggable]');
+      const dropZones = document.querySelectorAll('.cards');
+
+      cards.forEach(card => {
+        card.addEventListener('dragstart', (e) => {
+          draggedCard = card;
+          card.classList.add('dragging');
+          e.dataTransfer.effectAllowed = 'move';
+        });
+
+        card.addEventListener('dragend', () => {
+          card.classList.remove('dragging');
+          dropZones.forEach(zone => zone.classList.remove('drag-over'));
+          draggedCard = null;
+        });
+      });
+
+      dropZones.forEach(zone => {
+        zone.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = 'move';
+          zone.classList.add('drag-over');
+        });
+
+        zone.addEventListener('dragleave', () => {
+          zone.classList.remove('drag-over');
+        });
+
+        zone.addEventListener('drop', (e) => {
+          e.preventDefault();
+          zone.classList.remove('drag-over');
+          
+          if (draggedCard) {
+            const cardId = draggedCard.dataset.id;
+            const newColumn = zone.dataset.column;
+            
+            // Update local data
+            const card = data.cards.find(c => c.id === cardId);
+            if (card && card.column !== newColumn) {
+              card.column = newColumn;
+              if (newColumn === 'done') {
+                card.completedAt = new Date().toISOString().split('T')[0];
+              }
+              data.lastUpdated = new Date().toISOString();
+              
+              // Show feedback
+              showRefreshIndicator('Moved (sync pending)');
+              
+              // Re-render
+              render();
+              
+              // Note: In a real app, this would sync to server
+              console.log(`Move card ${cardId} to ${newColumn}`);
+            }
+          }
+        });
+      });
+    }
+
+    function showRefreshIndicator(msg = 'Updated') {
       const el = document.getElementById('refresh');
+      el.textContent = msg;
       el.classList.add('visible');
       setTimeout(() => el.classList.remove('visible'), 2000);
     }
@@ -559,7 +680,7 @@
       const newData = await fetchData();
       if (!newData) return;
       
-      if (data && JSON.stringify(newData) !== JSON.stringify(data)) {
+      if (JSON.stringify(newData) !== JSON.stringify(data)) {
         data = newData;
         render();
         showRefreshIndicator();
@@ -569,6 +690,11 @@
     async function init() {
       data = await fetchData();
       if (data) {
+        // Check if coming from "today" preference
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('view') === 'today') {
+          activeTab = 'today';
+        }
         render();
         setInterval(checkForUpdates, REFRESH_INTERVAL);
       } else {

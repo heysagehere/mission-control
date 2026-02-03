@@ -1,24 +1,74 @@
 {
   "columns": [
-    { "id": "backlog", "title": "Backlog" },
-    { "id": "up-next", "title": "Up Next" },
-    { "id": "in-progress", "title": "In Progress" },
-    { "id": "blocked", "title": "Blocked" },
-    { "id": "done", "title": "Done" }
+    {
+      "id": "backlog",
+      "title": "Backlog"
+    },
+    {
+      "id": "up-next",
+      "title": "Up Next"
+    },
+    {
+      "id": "in-progress",
+      "title": "In Progress"
+    },
+    {
+      "id": "blocked",
+      "title": "Blocked"
+    },
+    {
+      "id": "done",
+      "title": "Done"
+    }
   ],
   "projects": [
-    { "id": "forage-bali", "name": "Forage Bali", "color": "#7B9E6B" },
-    { "id": "knowyurself", "name": "KnowYurself", "color": "#8B9DC3" },
-    { "id": "fridays-at-four", "name": "Fridays at Four", "color": "#E07A3D" },
-    { "id": "alex-ops", "name": "Alex Ops", "color": "#9B7BC3" },
-    { "id": "personal", "name": "Personal", "color": "#C37B7B" }
+    {
+      "id": "forage-bali",
+      "name": "Forage Bali",
+      "color": "#7B9E6B"
+    },
+    {
+      "id": "knowyurself",
+      "name": "KnowYurself",
+      "color": "#8B9DC3"
+    },
+    {
+      "id": "fridays-at-four",
+      "name": "Fridays at Four",
+      "color": "#E07A3D"
+    },
+    {
+      "id": "alex-ops",
+      "name": "Alex Ops",
+      "color": "#9B7BC3"
+    },
+    {
+      "id": "personal",
+      "name": "Personal",
+      "color": "#C37B7B"
+    }
   ],
   "calendar": [
-    { "time": "10:00", "title": "Nick call" },
-    { "time": "11:00", "title": "Holly/Iso" },
-    { "time": "13:00", "title": "Reach out to people" },
-    { "time": "PM", "title": "Move to new hotel" },
-    { "time": "18:00", "title": "Men's group at KAFE" }
+    {
+      "time": "10:00",
+      "title": "Nick call"
+    },
+    {
+      "time": "11:00",
+      "title": "Holly/Iso"
+    },
+    {
+      "time": "13:00",
+      "title": "Reach out to people"
+    },
+    {
+      "time": "PM",
+      "title": "Move to new hotel"
+    },
+    {
+      "time": "18:00",
+      "title": "Men's group at KAFE"
+    }
   ],
   "cards": [
     {
@@ -86,7 +136,7 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "low",
-      "notes": "For Know Yourself ads — after organic content proves itself"
+      "notes": "For Know Yourself ads \u2014 after organic content proves itself"
     },
     {
       "id": "20",
@@ -114,7 +164,7 @@
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Carla sets up — waiting on class details"
+      "notes": "Carla sets up \u2014 waiting on class details"
     },
     {
       "id": "23",
@@ -224,7 +274,7 @@
       "owner": "Alex",
       "project": "personal",
       "priority": "high",
-      "notes": "VN168 SGN→HAN 10:10 AM Feb 3",
+      "notes": "VN168 SGN\u2192HAN 10:10 AM Feb 3",
       "completedAt": "2026-02-02"
     },
     {
@@ -246,7 +296,25 @@
       "priority": "high",
       "notes": "Afternoon - check out of Uma Wana Sara",
       "today": true
+    },
+    {
+      "id": "60",
+      "column": "backlog",
+      "title": "Give Alex TikTok access",
+      "owner": "Iso",
+      "project": "personal",
+      "priority": "low",
+      "notes": "Review content, give feedback, suggest improvements"
+    },
+    {
+      "id": "61",
+      "column": "backlog",
+      "title": "Give Alex personal Instagram access",
+      "owner": "Iso",
+      "project": "personal",
+      "priority": "low",
+      "notes": "Help restart posting, content strategy"
     }
   ],
-  "lastUpdated": "2026-02-03T14:24:00Z"
+  "lastUpdated": "2026-02-03T14:38:00Z"
 }

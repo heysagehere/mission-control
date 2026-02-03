@@ -227,7 +227,16 @@
       "priority": "high",
       "notes": "VN168 SGN→HAN 10:10 AM Feb 3",
       "completedAt": "2026-02-02"
+    },
+    {
+      "id": "52",
+      "column": "up-next",
+      "title": "Fresh install Alex + Babel on Mac",
+      "owner": "Both",
+      "project": "alex-ops",
+      "priority": "medium",
+      "notes": "Git clone install, migrate memories/skills, set up Babel in Docker. Plan: memory/procedural/fresh-install-plan.md"
     }
   ],
-  "lastUpdated": "2026-02-03T01:55:00Z"
+  "lastUpdated": "2026-02-03T13:17:00Z"
 }

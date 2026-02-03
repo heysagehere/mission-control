@@ -374,6 +374,27 @@
 
     initTheme();
 
+    // Check for quick-add via URL params
+    // e.g., ?add=Task+title&owner=Alex&project=alex-ops
+    function checkUrlParams() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('add')) {
+        const task = {
+          title: params.get('add'),
+          owner: params.get('owner') || 'Alex',
+          project: params.get('project') || 'alex-ops',
+          priority: params.get('priority') || 'medium',
+          notes: params.get('notes') || ''
+        };
+        // Show modal with task info (for now just alert)
+        alert(`Quick add requested:\n\n"${task.title}"\n\nTo add this task, ask Alex or use the CLI.`);
+        // Clear params
+        window.history.replaceState({}, '', window.location.pathname);
+      }
+    }
+
+    checkUrlParams();
+
     async function fetchData() {
       try {
         const res = await fetch(DATA_URL + '?t=' + Date.now());

@@ -1,0 +1,75 @@
+{
+  "columns": [
+    {
+      "id": "backlog",
+      "title": "Backlog",
+      "emoji": "📋"
+    },
+    {
+      "id": "up-next",
+      "title": "Up Next",
+      "emoji": "🎯"
+    },
+    {
+      "id": "in-progress",
+      "title": "In Progress",
+      "emoji": "🔨"
+    },
+    {
+      "id": "done",
+      "title": "Done",
+      "emoji": "✅"
+    }
+  ],
+  "cards": [
+    {
+      "id": "1",
+      "column": "in-progress",
+      "title": "Build kanban prototype",
+      "owner": "Alex",
+      "priority": "high",
+      "notes": "F@4 aesthetic, mobile-first, auto-updates"
+    },
+    {
+      "id": "2",
+      "column": "up-next",
+      "title": "System migration plan",
+      "owner": "Alex",
+      "priority": "medium",
+      "notes": "Clean reinstall, keep memories & skills"
+    },
+    {
+      "id": "3",
+      "column": "up-next",
+      "title": "Set up Babel properly",
+      "owner": "Alex",
+      "priority": "medium",
+      "notes": "Fresh start with clean baseline"
+    },
+    {
+      "id": "4",
+      "column": "backlog",
+      "title": "Forage Bali website",
+      "owner": "Iso",
+      "priority": "medium",
+      "notes": "foragebali.com development"
+    },
+    {
+      "id": "5",
+      "column": "backlog",
+      "title": "KnowYurself Instagram content",
+      "owner": "Both",
+      "priority": "low",
+      "notes": "Content strategy & automation"
+    },
+    {
+      "id": "6",
+      "column": "backlog",
+      "title": "2026 goals document",
+      "owner": "Iso",
+      "priority": "medium",
+      "notes": "Write up yearly goals"
+    }
+  ],
+  "lastUpdated": "2026-02-03T01:30:00Z"
+}

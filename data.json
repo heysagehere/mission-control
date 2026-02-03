@@ -314,7 +314,97 @@
       "project": "personal",
       "priority": "low",
       "notes": "Help restart posting, content strategy"
+    },
+    {
+      "id": "70",
+      "column": "backlog",
+      "title": "Insurance research",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Is it needed for foraging classes?"
+    },
+    {
+      "id": "71",
+      "column": "backlog",
+      "title": "Transportation plan",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Provide? Pickup point? Driver? Cost?"
+    },
+    {
+      "id": "72",
+      "column": "backlog",
+      "title": "Class logistics",
+      "owner": "Both",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Exact location, hours, what's included (samples, water, materials)"
+    },
+    {
+      "id": "73",
+      "column": "backlog",
+      "title": "Instagram profile setup",
+      "owner": "Alex",
+      "project": "knowyurself",
+      "priority": "medium",
+      "notes": "Bio, profile pic, aesthetic (after account created)"
+    },
+    {
+      "id": "74",
+      "column": "backlog",
+      "title": "Create Reels content",
+      "owner": "Alex",
+      "project": "knowyurself",
+      "priority": "low",
+      "notes": "Static images + trending audio"
+    },
+    {
+      "id": "75",
+      "column": "backlog",
+      "title": "Set up Meta Ads campaign",
+      "owner": "Alex",
+      "project": "knowyurself",
+      "priority": "low",
+      "notes": "After organic content proves itself. $500 budget."
+    },
+    {
+      "id": "76",
+      "column": "backlog",
+      "title": "YouTube filming schedule",
+      "owner": "Iso",
+      "project": "fridays-at-four",
+      "priority": "medium",
+      "notes": "Batch filming days with Nick"
+    },
+    {
+      "id": "77",
+      "column": "up-next",
+      "title": "Babel first tweet",
+      "owner": "Alex",
+      "project": "alex-ops",
+      "priority": "medium",
+      "notes": "After fresh install, get her posting"
+    },
+    {
+      "id": "78",
+      "column": "backlog",
+      "title": "Workout routine 3x/week",
+      "owner": "Iso",
+      "project": "personal",
+      "priority": "medium",
+      "notes": "Personal health goal"
+    },
+    {
+      "id": "79",
+      "column": "backlog",
+      "title": "Singing practice",
+      "owner": "Iso",
+      "project": "personal",
+      "priority": "low",
+      "notes": "Personal goal - do more"
     }
   ],
-  "lastUpdated": "2026-02-03T14:38:00Z"
+  "lastUpdated": "2026-02-03T14:41:00Z"
 }

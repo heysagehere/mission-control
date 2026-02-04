@@ -107,13 +107,14 @@
     },
     {
       "id": "11",
-      "column": "in-progress",
+      "column": "done",
       "title": "Instagram content strategy research",
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "high",
-      "notes": "Deep dive on 15-20 self-growth/relationship accounts. Report: research/instagram-selfgrowth-analysis.md",
-      "today": true
+      "notes": "Done! Report: research/instagram-selfgrowth-analysis.md",
+      "today": false,
+      "completedAt": "2026-02-04"
     },
     {
       "id": "12",
@@ -172,13 +173,14 @@
     },
     {
       "id": "23",
-      "column": "up-next",
+      "column": "done",
       "title": "WhatsApp Business research",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "SIM requirements, multi-device access, costs, best setup for Forage Bali",
-      "today": true
+      "notes": "Done! Report: research/whatsapp-business-setup.md",
+      "today": false,
+      "completedAt": "2026-02-04"
     },
     {
       "id": "24",
@@ -410,5 +412,5 @@
       "notes": "Personal goal - do more"
     }
   ],
-  "lastUpdated": "2026-02-03T14:47:00Z"
+  "lastUpdated": "2026-02-04T00:00:00Z"
 }

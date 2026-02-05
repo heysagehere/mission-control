@@ -86,7 +86,7 @@
       "owner": "Both",
       "project": "knowyurself",
       "priority": "high",
-      "notes": "\u2705 Created Meta app, connected know.yur.self Business account, API working. Token saved to ~/.credentials/instagram.env. Created instagram-api-setup skill.",
+      "notes": "✅ Created Meta app, connected know.yur.self Business account, API working. Token saved to ~/.credentials/instagram.env. Created instagram-api-setup skill.",
       "completedAt": "2026-02-04"
     },
     {
@@ -125,7 +125,7 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "low",
-      "notes": "For Know Yourself ads \u2014 after organic content proves itself"
+      "notes": "For Know Yourself ads — after organic content proves itself"
     },
     {
       "id": "20",
@@ -143,7 +143,7 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "\u2705 All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
+      "notes": "✅ All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
       "completedAt": "2026-02-04"
     },
     {
@@ -163,7 +163,7 @@
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Carla sets up \u2014 waiting on class details"
+      "notes": "Carla sets up — waiting on class details"
     },
     {
       "id": "23",
@@ -274,7 +274,7 @@
       "owner": "Alex",
       "project": "personal",
       "priority": "high",
-      "notes": "VN168 SGN\u2192HAN 10:10 AM Feb 3",
+      "notes": "VN168 SGN→HAN 10:10 AM Feb 3",
       "completedAt": "2026-02-02"
     },
     {
@@ -404,7 +404,16 @@
       "project": "personal",
       "priority": "low",
       "notes": "Personal goal - do more"
+    },
+    {
+      "id": "81",
+      "column": "up-next",
+      "title": "Get DICOM files put onto USB",
+      "owner": "Iso",
+      "project": "personal",
+      "priority": "medium",
+      "notes": ""
     }
   ],
-  "lastUpdated": "2026-02-04T13:00:00Z"
+  "lastUpdated": "2026-02-05T09:36:01Z"
 }

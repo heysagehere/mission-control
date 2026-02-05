@@ -445,7 +445,16 @@
       "project": "nighttime",
       "priority": "low",
       "notes": ""
+    },
+    {
+      "id": "85",
+      "column": "up-next",
+      "title": "Move all notes from Evernote to new note keeper",
+      "owner": "Iso",
+      "project": "nighttime",
+      "priority": "low",
+      "notes": ""
     }
   ],
-  "lastUpdated": "2026-02-05T10:29:31.571Z"
+  "lastUpdated": "2026-02-05T11:35:05.000Z"
 }

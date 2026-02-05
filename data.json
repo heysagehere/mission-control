@@ -50,28 +50,12 @@
   ],
   "calendar": [
     {
-      "time": "10:00",
-      "title": "Nick call"
-    },
-    {
-      "time": "11:00",
-      "title": "Holly/Iso"
-    },
-    {
-      "time": "12:30",
-      "title": "Lunch with Sho @ Sayuri"
-    },
-    {
       "time": "13:00",
-      "title": "Reach out to people"
+      "title": "Pay bill for IMEI"
     },
     {
-      "time": "PM",
-      "title": "Move to new hotel"
-    },
-    {
-      "time": "18:00",
-      "title": "Men's group at KAFE"
+      "time": "14:00",
+      "title": "Txt Phil from men's group"
     }
   ],
   "cards": [
@@ -102,7 +86,7 @@
       "owner": "Both",
       "project": "knowyurself",
       "priority": "high",
-      "notes": "✅ Created Meta app, connected know.yur.self Business account, API working. Token saved to ~/.credentials/instagram.env. Created instagram-api-setup skill.",
+      "notes": "\u2705 Created Meta app, connected know.yur.self Business account, API working. Token saved to ~/.credentials/instagram.env. Created instagram-api-setup skill.",
       "completedAt": "2026-02-04"
     },
     {
@@ -141,7 +125,7 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "low",
-      "notes": "For Know Yourself ads — after organic content proves itself"
+      "notes": "For Know Yourself ads \u2014 after organic content proves itself"
     },
     {
       "id": "20",
@@ -159,17 +143,18 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "✅ All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
+      "notes": "\u2705 All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
       "completedAt": "2026-02-04"
     },
     {
       "id": "80",
-      "column": "up-next",
+      "column": "done",
       "title": "Create 30s hero video",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "Montage: palm climb + rice paddies + foraging + stream washing + teaching + cooking. Waiting for Iso approval to proceed."
+      "notes": "v7 complete - 33.5s, 1920x1080, great result. Cost ~$3.",
+      "completedAt": "2026-02-04"
     },
     {
       "id": "22",
@@ -178,7 +163,7 @@
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Carla sets up — waiting on class details"
+      "notes": "Carla sets up \u2014 waiting on class details"
     },
     {
       "id": "23",
@@ -289,7 +274,7 @@
       "owner": "Alex",
       "project": "personal",
       "priority": "high",
-      "notes": "VN168 SGN→HAN 10:10 AM Feb 3",
+      "notes": "VN168 SGN\u2192HAN 10:10 AM Feb 3",
       "completedAt": "2026-02-02"
     },
     {

@@ -46,6 +46,11 @@
       "id": "personal",
       "name": "Personal",
       "color": "#C37B7B"
+    },
+    {
+      "id": "nighttime",
+      "name": "Nighttime",
+      "color": "#4A5568"
     }
   ],
   "calendar": [
@@ -413,7 +418,34 @@
       "project": "personal",
       "priority": "medium",
       "notes": ""
+    },
+    {
+      "id": "82",
+      "column": "up-next",
+      "title": "Move health docs from Claude to local",
+      "owner": "Iso",
+      "project": "nighttime",
+      "priority": "low",
+      "notes": ""
+    },
+    {
+      "id": "83",
+      "column": "up-next",
+      "title": "Move life docs from Claude to local",
+      "owner": "Iso",
+      "project": "nighttime",
+      "priority": "low",
+      "notes": ""
+    },
+    {
+      "id": "84",
+      "column": "up-next",
+      "title": "Move travel docs from Claude to local",
+      "owner": "Iso",
+      "project": "nighttime",
+      "priority": "low",
+      "notes": ""
     }
   ],
-  "lastUpdated": "2026-02-05T09:36:01Z"
+  "lastUpdated": "2026-02-05T10:29:31.571Z"
 }

@@ -109,6 +109,7 @@
       color: var(--accent); 
     }
 
+    /* BIGGER TABS */
     .tabs {
       display: flex;
       gap: 0.5rem;
@@ -242,16 +243,6 @@
       transform: scale(1.05);
     }
 
-    .today-card.completed-card {
-      opacity: 0.6;
-      border-left-color: var(--low);
-    }
-
-    .today-card.completed-card .card-title {
-      text-decoration: line-through;
-      color: var(--text-muted);
-    }
-
     .calendar-item {
       display: flex;
       gap: 0.75rem;
@@ -277,95 +268,6 @@
       text-align: center;
       padding: 2rem;
       color: var(--text-muted);
-    }
-
-    /* Add Task Button */
-    .add-task-btn {
-      width: 100%;
-      background: var(--bg);
-      border: 2px dashed var(--border);
-      padding: 1rem;
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      color: var(--text-muted);
-      font-family: inherit;
-      transition: all 0.15s;
-      margin-bottom: 1rem;
-    }
-
-    .add-task-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-light);
-    }
-
-    /* Add Task Form */
-    .add-task-form {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: var(--shadow);
-      border: 2px solid var(--accent);
-    }
-
-    .add-task-form input,
-    .add-task-form select {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-family: inherit;
-      margin-bottom: 0.5rem;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    .add-task-form input:focus,
-    .add-task-form select:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    .add-task-form .form-row {
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .add-task-form .form-row select {
-      flex: 1;
-    }
-
-    .add-task-form .form-actions {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-
-    .add-task-form button {
-      flex: 1;
-      padding: 0.75rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: inherit;
-      transition: all 0.15s;
-    }
-
-    .add-task-form .save-btn {
-      background: var(--accent);
-      color: white;
-      border: none;
-    }
-
-    .add-task-form .cancel-btn {
-      background: var(--bg);
-      color: var(--text-muted);
-      border: 1px solid var(--border);
     }
 
     /* Board View */
@@ -406,11 +308,27 @@
       }
     }
 
+    /* DESKTOP STYLES */
     @media (min-width: 1024px) {
-      header { padding: 1.25rem 2rem; }
-      .header-inner { max-width: 1400px; margin: 0 auto; }
-      .tabs { max-width: 400px; }
-      .tab { flex: none; padding: 0.75rem 2rem; }
+      header {
+        padding: 1.25rem 2rem;
+      }
+
+      .header-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .tabs {
+        max-width: 400px;
+      }
+
+      .tab {
+        flex: none;
+        padding: 0.75rem 2rem;
+      }
+
+      /* Today view - wider, fills screen better */
       .today-view {
         max-width: 1100px;
         padding: 2rem 4rem;
@@ -418,32 +336,107 @@
         grid-template-columns: 1fr 320px;
         gap: 2rem 4rem;
       }
-      .today-section:nth-child(1) { grid-column: 1; grid-row: 1; }
-      .today-section:nth-child(2) { grid-column: 2; grid-row: 1; }
-      .today-section:nth-child(3) { grid-column: 1; grid-row: 2; }
-      .today-section:nth-child(4) { grid-column: 2; grid-row: 2; }
-      .today-section:nth-child(5) { grid-column: 1 / 3; grid-row: 3; }
-      .today-section { margin-bottom: 0; }
-      .today-section h2 { font-size: 0.85rem; }
-      .today-card { padding: 1.25rem 1.5rem; transition: transform 0.15s, box-shadow 0.15s; }
-      .today-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
-      .today-card .card-title { font-size: 1rem; }
-      .today-card .card-notes { font-size: 0.85rem; }
-      .board { padding: 2rem; justify-content: center; gap: 1.25rem; }
-      .column { flex: 0 0 320px; min-width: 300px; max-width: 350px; padding: 1rem; }
-      .card { padding: 1rem; transition: transform 0.15s, box-shadow 0.15s; }
-      .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
-      .filters { gap: 0.5rem; }
-      .filter-btn { padding: 0.5rem 1rem; }
+
+      .today-section:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .today-section:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .today-section:nth-child(3) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+      }
+
+      .today-section:nth-child(3) .today-card {
+        display: inline-block;
+        width: calc(50% - 0.5rem);
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        vertical-align: top;
+      }
+
+      .today-section {
+        margin-bottom: 0;
+      }
+
+      .today-section h2 {
+        font-size: 0.85rem;
+      }
+
+      .today-card {
+        padding: 1.25rem 1.5rem;
+        transition: transform 0.15s, box-shadow 0.15s;
+      }
+
+      .today-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .today-card .card-title {
+        font-size: 1rem;
+      }
+
+      .today-card .card-notes {
+        font-size: 0.85rem;
+      }
+
+      /* Board view - centered, better spacing */
+      .board {
+        padding: 2rem;
+        justify-content: center;
+        gap: 1.25rem;
+      }
+
+      .column {
+        flex: 0 0 320px;
+        min-width: 300px;
+        max-width: 350px;
+        padding: 1rem;
+      }
+
+      .card {
+        padding: 1rem;
+        transition: transform 0.15s, box-shadow 0.15s;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .filters {
+        gap: 0.5rem;
+      }
+
+      .filter-btn {
+        padding: 0.5rem 1rem;
+      }
     }
 
+    /* Extra wide screens */
     @media (min-width: 1400px) {
-      .today-view { max-width: 1300px; grid-template-columns: 1fr 380px; }
+      .today-view {
+        max-width: 1300px;
+        grid-template-columns: 1fr 380px;
+      }
     }
 
     @media (min-width: 1600px) {
-      .today-view { max-width: 1400px; grid-template-columns: 1fr 420px; }
-      .column { flex: 0 0 360px; max-width: 400px; }
+      .today-view {
+        max-width: 1400px;
+        grid-template-columns: 1fr 420px;
+      }
+
+      .column {
+        flex: 0 0 360px;
+        max-width: 400px;
+      }
     }
 
     .column-header {
@@ -479,6 +472,10 @@
       padding: 2px;
     }
 
+    .cards.drag-over {
+      background: var(--accent-light);
+    }
+
     .card {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -489,10 +486,24 @@
       cursor: pointer;
       position: relative;
       user-select: none;
+      -webkit-user-select: none;
     }
 
-    .card:active { transform: scale(0.98); box-shadow: var(--shadow-hover); }
-    .card.done-card { opacity: 0.6; border-left-color: var(--low); }
+    .card:active {
+      transform: scale(0.98);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card.dragging {
+      opacity: 0.4;
+      transform: scale(0.95);
+    }
+
+    .card.done-card {
+      opacity: 0.6;
+      border-left-color: var(--low);
+    }
+
     .card-project {
       font-size: 0.65rem;
       font-weight: 500;
@@ -509,7 +520,10 @@
       line-height: 1.3;
     }
 
-    .card.done-card .card-title { text-decoration: line-through; color: var(--text-muted); }
+    .card.done-card .card-title {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
 
     .card-meta {
       display: flex;
@@ -531,6 +545,36 @@
     .tag.medium { background: #FDF6E3; color: var(--medium); }
     .tag.low { background: #E8F4EA; color: var(--low); }
 
+    /* Quick actions on cards */
+    .card-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-action {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+      color: var(--text-muted);
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .card-action:hover, .card-action:active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
     .card-notes {
       font-size: 0.8rem;
       color: var(--text-muted);
@@ -539,6 +583,8 @@
       display: none;
     }
 
+    .card.expanded .card-notes,
+    .card.expanded .card-actions { display: flex; }
     .card.expanded .card-notes { display: block; }
 
     .refresh-indicator {
@@ -563,11 +609,13 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      height: 100dvh;
       color: var(--text-muted);
     }
 
     .hidden { display: none !important; }
 
+    /* Move modal */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -612,7 +660,10 @@
       transition: all 0.15s;
     }
 
-    .modal-option:hover { border-color: var(--accent); background: var(--accent-light); }
+    .modal-option:hover, .modal-option:active {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
 
     .modal-cancel {
       display: block;
@@ -636,46 +687,10 @@
   <script>
     const DATA_URL = 'data.json';
     const REFRESH_INTERVAL = 30000;
-    const LOCAL_STORAGE_KEY = 'missionControlState';
 
     let data = null;
-    let localChanges = {};
     let activeFilter = 'all';
     let activeTab = 'today';
-    let showAddForm = false;
-
-    // Load local changes from localStorage
-    function loadLocalChanges() {
-      try {
-        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
-        if (saved) {
-          localChanges = JSON.parse(saved);
-          // Clean up old completed items (older than 7 days)
-          const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
-          Object.keys(localChanges.completedToday || {}).forEach(id => {
-            if (localChanges.completedToday[id] < weekAgo) {
-              delete localChanges.completedToday[id];
-            }
-          });
-        }
-      } catch (e) {
-        localChanges = {};
-      }
-      if (!localChanges.completedToday) localChanges.completedToday = {};
-      if (!localChanges.removedFromToday) localChanges.removedFromToday = {};
-      if (!localChanges.addedToToday) localChanges.addedToToday = {};
-      if (!localChanges.localTasks) localChanges.localTasks = [];
-    }
-
-    function saveLocalChanges() {
-      try {
-        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(localChanges));
-      } catch (e) {
-        console.error('Failed to save local changes');
-      }
-    }
-
-    loadLocalChanges();
 
     // Theme
     function initTheme() {
@@ -720,85 +735,33 @@
       return project ? project.name : projectId;
     }
 
-    function getAllCards() {
-      // Merge server cards with local tasks
-      const allCards = [...data.cards];
-      localChanges.localTasks.forEach(task => {
-        if (!allCards.find(c => c.id === task.id)) {
-          allCards.push(task);
-        }
-      });
-      return allCards;
-    }
-
     function getFilteredCards() {
-      const allCards = getAllCards();
-      if (activeFilter === 'all') return allCards;
+      if (activeFilter === 'all') return data.cards;
       if (['alex', 'iso', 'both', 'carla', 'yuka', 'nick'].includes(activeFilter)) {
-        return allCards.filter(c => c.owner.toLowerCase() === activeFilter);
+        return data.cards.filter(c => c.owner.toLowerCase() === activeFilter);
       }
-      return allCards.filter(c => c.project === activeFilter);
-    }
-
-    function isCompletedLocally(cardId) {
-      return !!localChanges.completedToday[cardId];
-    }
-
-    function isRemovedFromToday(cardId) {
-      return !!localChanges.removedFromToday[cardId];
-    }
-
-    function isAddedToToday(cardId) {
-      return !!localChanges.addedToToday[cardId];
+      return data.cards.filter(c => c.project === activeFilter);
     }
 
     function getIsoTodayTasks() {
-      const allCards = getAllCards();
-      return allCards.filter(c => {
-        // Skip if completed locally
-        if (isCompletedLocally(c.id)) return false;
-        // Skip if removed from today locally
-        if (isRemovedFromToday(c.id)) return false;
-        // Skip if server says done
-        if (c.column === 'done') return false;
-        // Include if server says today OR locally added to today
-        return c.today === true || isAddedToToday(c.id);
-      });
-    }
-
-    function getTodayCompleted() {
-      const today = new Date().toISOString().split('T')[0];
-      const allCards = getAllCards();
-      return allCards.filter(c => {
-        // Completed locally today
-        if (localChanges.completedToday[c.id]) {
-          const completedDate = new Date(localChanges.completedToday[c.id]).toISOString().split('T')[0];
-          return completedDate === today;
-        }
-        // Or completed on server today
-        return c.column === 'done' && c.completedAt === today;
-      });
+      return data.cards.filter(c => c.today === true && c.column !== 'done');
     }
 
     function getIsoUpcoming() {
-      const allCards = getAllCards();
-      return allCards.filter(c => 
+      return data.cards.filter(c => 
         c.owner.toLowerCase() === 'iso' && 
         c.column !== 'done' &&
         !c.today &&
-        !isAddedToToday(c.id) &&
-        !isCompletedLocally(c.id) &&
         (c.column === 'up-next' || c.priority === 'high')
       ).slice(0, 5);
     }
 
+    // Move card
     function showMoveModal(cardId) {
-      const allCards = getAllCards();
-      const card = allCards.find(c => c.id === cardId);
+      const card = data.cards.find(c => c.id === cardId);
       if (!card) return;
 
       const columns = data.columns.filter(c => c.id !== card.column);
-      const isToday = card.today || isAddedToToday(cardId);
       
       document.getElementById('modal').innerHTML = `
         <div class="modal-overlay" onclick="closeModal(event)">
@@ -808,7 +771,7 @@
               <button class="modal-option" onclick="moveCard('${cardId}', '${col.id}')">${col.title}</button>
             `).join('')}
             <button class="modal-option" onclick="toggleToday('${cardId}')" style="border-color: var(--accent)">
-              ${isToday ? 'Remove from Today' : 'Add to Today'}
+              ${card.today ? 'Remove from Today' : 'Add to Today'}
             </button>
             <button class="modal-cancel" onclick="closeModal()">Cancel</button>
           </div>
@@ -823,13 +786,14 @@
     }
 
     function moveCard(cardId, newColumn) {
-      const allCards = getAllCards();
-      const card = allCards.find(c => c.id === cardId);
+      const card = data.cards.find(c => c.id === cardId);
       if (card) {
         card.column = newColumn;
         if (newColumn === 'done') {
-          markDone(cardId);
+          card.completedAt = new Date().toISOString().split('T')[0];
+          card.today = false;
         }
+        data.lastUpdated = new Date().toISOString();
         showRefreshIndicator('Moved');
         closeModal();
         render();
@@ -837,124 +801,41 @@
     }
 
     function toggleToday(cardId) {
-      const isToday = data.cards.find(c => c.id === cardId)?.today || isAddedToToday(cardId);
-      
-      if (isToday) {
-        // Remove from today
-        delete localChanges.addedToToday[cardId];
-        localChanges.removedFromToday[cardId] = Date.now();
-        showRefreshIndicator('Removed');
-      } else {
-        // Add to today
-        delete localChanges.removedFromToday[cardId];
-        localChanges.addedToToday[cardId] = Date.now();
-        showRefreshIndicator('Added to Today');
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.today = !card.today;
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator(card.today ? 'Added to Today' : 'Removed');
+        closeModal();
+        render();
       }
-      saveLocalChanges();
-      closeModal();
-      render();
     }
 
     function removeFromToday(cardId) {
-      delete localChanges.addedToToday[cardId];
-      localChanges.removedFromToday[cardId] = Date.now();
-      saveLocalChanges();
-      showRefreshIndicator('Removed');
-      render();
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.today = false;
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator('Removed');
+        render();
+      }
     }
 
     function markDone(cardId, event) {
       if (event) event.stopPropagation();
-      localChanges.completedToday[cardId] = Date.now();
-      delete localChanges.addedToToday[cardId];
-      delete localChanges.removedFromToday[cardId];
-      saveLocalChanges();
-      showRefreshIndicator('✓ Done!');
-      render();
-    }
-
-    function undoDone(cardId, event) {
-      if (event) event.stopPropagation();
-      delete localChanges.completedToday[cardId];
-      saveLocalChanges();
-      showRefreshIndicator('Restored');
-      render();
-    }
-
-    function showAddTaskForm() {
-      showAddForm = true;
-      render();
-      setTimeout(() => document.getElementById('new-task-title')?.focus(), 100);
-    }
-
-    function hideAddTaskForm() {
-      showAddForm = false;
-      render();
-    }
-
-    function addTask() {
-      const title = document.getElementById('new-task-title')?.value?.trim();
-      const project = document.getElementById('new-task-project')?.value || 'personal';
-      const priority = document.getElementById('new-task-priority')?.value || 'medium';
-      
-      if (!title) {
-        showRefreshIndicator('Enter a title');
-        return;
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.column = 'done';
+        card.completedAt = new Date().toISOString().split('T')[0];
+        card.today = false;
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator('✓ Done!');
+        render();
       }
-
-      const newTask = {
-        id: 'local-' + Date.now(),
-        column: 'up-next',
-        title: title,
-        owner: 'Iso',
-        project: project,
-        priority: priority,
-        today: true,
-        isLocal: true
-      };
-
-      localChanges.localTasks.push(newTask);
-      localChanges.addedToToday[newTask.id] = Date.now();
-      saveLocalChanges();
-      
-      showAddForm = false;
-      showRefreshIndicator('Task added!');
-      render();
-    }
-
-    function renderAddTaskForm() {
-      if (!showAddForm) {
-        return `<button class="add-task-btn" onclick="showAddTaskForm()">+ Add Task</button>`;
-      }
-      
-      const projectOptions = data.projects.map(p => 
-        `<option value="${p.id}">${p.name}</option>`
-      ).join('');
-
-      return `
-        <div class="add-task-form">
-          <input type="text" id="new-task-title" placeholder="What needs to be done?" onkeydown="if(event.key==='Enter')addTask()">
-          <div class="form-row">
-            <select id="new-task-project">
-              ${projectOptions}
-            </select>
-            <select id="new-task-priority">
-              <option value="high">High</option>
-              <option value="medium" selected>Medium</option>
-              <option value="low">Low</option>
-            </select>
-          </div>
-          <div class="form-actions">
-            <button class="cancel-btn" onclick="hideAddTaskForm()">Cancel</button>
-            <button class="save-btn" onclick="addTask()">Add Task</button>
-          </div>
-        </div>
-      `;
     }
 
     function renderTodayView() {
       const todayTasks = getIsoTodayTasks();
-      const completedTasks = getTodayCompleted();
       const upcoming = getIsoUpcoming();
       const calendar = data.calendar || [];
 
@@ -962,16 +843,15 @@
         <div class="today-view">
           <div class="today-section">
             <h2>Today's Focus (${todayTasks.length})</h2>
-            ${renderAddTaskForm()}
             ${todayTasks.length ? todayTasks.map(card => `
               <div class="today-card priority-${card.priority || 'medium'}">
                 <button class="done-btn" onclick="markDone('${card.id}', event)" title="Mark done">✓</button>
                 <button class="remove-btn" onclick="removeFromToday('${card.id}')" title="Remove">×</button>
-                <div class="card-project">${getProjectName(card.project)}${card.isLocal ? ' · local' : ''}</div>
+                <div class="card-project">${getProjectName(card.project)}</div>
                 <div class="card-title">${card.title}</div>
                 ${card.notes ? `<div class="card-notes" style="display:block;margin-top:0.5rem">${card.notes}</div>` : ''}
               </div>
-            `).join('') : '<div class="empty-state">Add tasks above or tap cards in Board view</div>'}
+            `).join('') : '<div class="empty-state">Tap cards in Board view to add tasks here</div>'}
           </div>
           
           <div class="today-section">
@@ -984,16 +864,6 @@
                 </div>
               `).join('')}
             </div>` : '<div class="empty-state">No events today</div>'}
-          </div>
-
-          <div class="today-section">
-            <h2>Completed Today (${completedTasks.length})</h2>
-            ${completedTasks.length ? completedTasks.map(card => `
-              <div class="today-card completed-card priority-low" onclick="undoDone('${card.id}', event)" style="cursor:pointer" title="Click to restore">
-                <div class="card-project">${getProjectName(card.project)} · tap to restore</div>
-                <div class="card-title">${card.title}</div>
-              </div>
-            `).join('') : '<div class="empty-state">Complete tasks to see them here ✓</div>'}
           </div>
 
           <div class="today-section">
@@ -1013,24 +883,18 @@
       const filteredCards = getFilteredCards();
 
       const columnsHtml = data.columns.map(col => {
-        const cards = filteredCards.filter(c => {
-          if (isCompletedLocally(c.id)) {
-            return col.id === 'done';
-          }
-          return c.column === col.id;
-        });
+        const cards = filteredCards.filter(c => c.column === col.id);
         const extraClass = col.id === 'blocked' ? 'blocked' : col.id === 'done' ? 'done' : '';
         
         const cardsHtml = cards.map(card => {
           const projectName = getProjectName(card.project);
-          const isDone = col.id === 'done' || isCompletedLocally(card.id);
-          const isToday = card.today || isAddedToToday(card.id);
+          const isDone = col.id === 'done';
           
           return `
-            <div class="card ${isDone ? 'done-card' : ''}" 
+            <div class="card ${isDone ? 'done-card' : ''} ${card.today ? 'today-flagged' : ''}" 
                  data-id="${card.id}"
                  onclick="showMoveModal('${card.id}')">
-              <div class="card-project">${projectName}${isToday && !isDone ? ' · TODAY' : ''}</div>
+              <div class="card-project">${projectName}${card.today ? ' · TODAY' : ''}</div>
               <div class="card-title">${card.title}</div>
               <div class="card-meta">
                 <span class="tag">${card.owner}</span>
@@ -1058,16 +922,17 @@
       const app = document.getElementById('app');
       const isDark = document.documentElement.dataset.theme === 'dark';
 
-      const allCards = getAllCards();
-      const activeCards = allCards.filter(c => c.column !== 'done' && !isCompletedLocally(c.id));
+      // Counts
+      const activeCards = data.cards.filter(c => c.column !== 'done');
       const ownerCounts = {};
       activeCards.forEach(c => {
         const owner = c.owner.toLowerCase();
         ownerCounts[owner] = (ownerCounts[owner] || 0) + 1;
       });
 
-      const todayCount = getIsoTodayTasks().length;
+      const todayCount = data.cards.filter(c => c.today && c.column !== 'done').length;
 
+      // Project counts
       const projectCounts = {};
       activeCards.forEach(c => {
         projectCounts[c.project] = (projectCounts[c.project] || 0) + 1;
@@ -1123,6 +988,7 @@
 
       app.classList.remove('loading');
 
+      // Event listeners
       document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', () => {
           activeTab = tab.dataset.tab;

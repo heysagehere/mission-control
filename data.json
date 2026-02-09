@@ -46,6 +46,11 @@
       "id": "personal",
       "name": "Personal",
       "color": "#C37B7B"
+    },
+    {
+      "id": "youtube-ai",
+      "name": "YouTube AI & Culture",
+      "color": "#E74C3C"
     }
   ],
   "calendar": [
@@ -88,7 +93,7 @@
       "owner": "Both",
       "project": "knowyurself",
       "priority": "high",
-      "notes": "\u2705 Created Meta app, connected know.yur.self Business account, API working. Token saved to ~/.credentials/instagram.env. Created instagram-api-setup skill.",
+      "notes": "✅ Created Meta app, connected know.yur.self Business account, API working. Token saved to ~/.credentials/instagram.env. Created instagram-api-setup skill.",
       "completedAt": "2026-02-04",
       "today": false
     },
@@ -105,13 +110,13 @@
     },
     {
       "id": "12",
-      "column": "backlog",
+      "column": "in-progress",
       "title": "Build bank of 20+ quote images",
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "medium",
-      "notes": "For Know Yourself Instagram content",
-      "today": false
+      "notes": "33 quotes written! See projects/knowyurself/quote-bank.md. Next: create actual images.",
+      "today": true
     },
     {
       "id": "13",
@@ -130,7 +135,7 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "low",
-      "notes": "For Know Yourself ads \u2014 after organic content proves itself",
+      "notes": "For Know Yourself ads — after organic content proves itself",
       "today": false
     },
     {
@@ -150,7 +155,7 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "\u2705 All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
+      "notes": "✅ All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
       "completedAt": "2026-02-04",
       "today": false
     },
@@ -171,7 +176,7 @@
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Carla sets up \u2014 waiting on class details",
+      "notes": "Carla sets up — waiting on class details",
       "today": false
     },
     {
@@ -257,13 +262,14 @@
     },
     {
       "id": "40",
-      "column": "up-next",
+      "column": "done",
       "title": "YouTube video structure",
       "owner": "Both",
       "project": "fridays-at-four",
       "priority": "medium",
-      "notes": "Plan format, content calendar with Nick. Alex prepping research.",
-      "today": false
+      "notes": "CANCELLED - F@4 shutting down. Replaced by personal YouTube AI & Culture channel.",
+      "today": false,
+      "completedAt": "2026-02-09"
     },
     {
       "id": "41",
@@ -292,7 +298,7 @@
       "owner": "Alex",
       "project": "personal",
       "priority": "high",
-      "notes": "VN168 SGN\u2192HAN 10:10 AM Feb 3",
+      "notes": "VN168 SGN→HAN 10:10 AM Feb 3",
       "completedAt": "2026-02-02",
       "today": false
     },
@@ -303,7 +309,7 @@
       "owner": "Both",
       "project": "alex-ops",
       "priority": "medium",
-      "notes": "\u2705 Multi-agent setup complete: VPS Alex (WhatsApp) + Local Alex (Slack) + Layla + Claude. Shared repo working.",
+      "notes": "✅ Multi-agent setup complete: VPS Alex (WhatsApp) + Local Alex (Slack) + Layla + Claude. Shared repo working.",
       "today": false,
       "completedAt": "2026-02-07"
     },
@@ -456,7 +462,28 @@
       "priority": "medium",
       "notes": "Big project - full website redesign",
       "today": false
+    },
+    {
+      "id": "83",
+      "column": "done",
+      "title": "First episode recorded",
+      "owner": "Both",
+      "project": "youtube-ai",
+      "priority": "high",
+      "notes": "Conversation about AI agents, job displacement, consciousness. Saved to memory/episodic/youtube-conversations.md",
+      "completedAt": "2026-02-09",
+      "today": false
+    },
+    {
+      "id": "84",
+      "column": "up-next",
+      "title": "Edit first YouTube episode",
+      "owner": "Iso",
+      "project": "youtube-ai",
+      "priority": "high",
+      "notes": "Format: Iso on camera responding, Alex voice as prompts. Keep it raw.",
+      "today": true
     }
   ],
-  "lastUpdated": "2026-02-09T00:00:00.000000Z"
+  "lastUpdated": "2026-02-09T13:01:59.536Z"
 }

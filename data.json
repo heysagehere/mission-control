@@ -167,7 +167,7 @@
       "project": "forage-bali",
       "priority": "high",
       "notes": "Montage: palm climb + rice paddies + foraging + stream washing + teaching + cooking. Waiting for Iso approval to proceed.",
-      "today": true
+      "today": false
     },
     {
       "id": "22",
@@ -381,7 +381,7 @@
       "project": "knowyurself",
       "priority": "medium",
       "notes": "Draft complete: projects/knowyurself/instagram-profile-setup.md. Waiting on Iso to review and pick options.",
-      "today": true
+      "today": false
     },
     {
       "id": "74",
@@ -421,7 +421,7 @@
       "project": "alex-ops",
       "priority": "medium",
       "notes": "After fresh install, get her posting",
-      "today": false
+      "today": true
     },
     {
       "id": "78",
@@ -483,7 +483,17 @@
       "priority": "high",
       "notes": "Format: Iso on camera responding, Alex voice as prompts. Keep it raw.",
       "today": true
+    },
+    {
+      "id": "85",
+      "column": "up-next",
+      "title": "Create #noko channel + invite bot",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Noko is running but needs channel setup in Forage Bali Slack",
+      "today": true
     }
   ],
-  "lastUpdated": "2026-02-09T13:01:59.536Z"
+  "lastUpdated": "2026-02-10T00:00:30.983Z"
 }

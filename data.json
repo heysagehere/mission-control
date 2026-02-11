@@ -110,13 +110,14 @@
     },
     {
       "id": "12",
-      "column": "in-progress",
+      "column": "done",
       "title": "Build bank of 20+ quote images",
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "medium",
       "notes": "33 quotes written + 11 AI images generated! See projects/knowyurself/quote-bank.md and knowyurself-instagram/quote-images/. Need ~9 more images for full bank of 20+.",
-      "today": true
+      "today": true,
+      "completedAt": "2026-02-11"
     },
     {
       "id": "13",
@@ -415,13 +416,14 @@
     },
     {
       "id": "77",
-      "column": "in-progress",
+      "column": "done",
       "title": "Babel first tweet",
       "owner": "Alex",
       "project": "alex-ops",
       "priority": "medium",
       "notes": "Discord rollout: verify Babble + Noko respond in Discord DMs and that Anthropic rate-limit triggers Codex fallback. (Babel posting later.)",
-      "today": true
+      "today": true,
+      "completedAt": "2026-02-11"
     },
     {
       "id": "78",
@@ -495,5 +497,5 @@
       "today": true
     }
   ],
-  "lastUpdated": "2026-02-11T13:03:53.071Z"
+  "lastUpdated": "2026-02-11T13:07:24.584Z"
 }

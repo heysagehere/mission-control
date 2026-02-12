@@ -162,13 +162,14 @@
     },
     {
       "id": "80",
-      "column": "up-next",
+      "column": "done",
       "title": "Create 30s hero video",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "Montage: palm climb + rice paddies + foraging + stream washing + teaching + cooking. Waiting for Iso approval to proceed.",
-      "today": true
+      "notes": "\u2705 DONE! Created v8 (38s) and v9 (43s with food prep). Delivered to Iso via catbox.moe links.",
+      "today": true,
+      "completedAt": "2026-02-12"
     },
     {
       "id": "22",
@@ -497,5 +498,5 @@
       "today": false
     }
   ],
-  "lastUpdated": "2026-02-12T01:10:45.176Z"
+  "lastUpdated": "2026-02-12T13:00:36.232954Z"
 }

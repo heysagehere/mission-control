@@ -1,0 +1,196 @@
+{
+  "columns": [
+    {
+      "id": "backlog",
+      "title": "Backlog"
+    },
+    {
+      "id": "up-next",
+      "title": "Up Next"
+    },
+    {
+      "id": "in-progress",
+      "title": "In Progress"
+    },
+    {
+      "id": "blocked",
+      "title": "Blocked"
+    },
+    {
+      "id": "done",
+      "title": "Done"
+    }
+  ],
+  "projects": [
+    {
+      "id": "forage-bali",
+      "name": "Forage Bali",
+      "color": "#7B9E6B"
+    }
+  ],
+  "cards": [
+    {
+      "id": "20",
+      "column": "blocked",
+      "title": "Classes page",
+      "owner": "Both",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Waiting on Made to get back to us",
+      "today": false
+    },
+    {
+      "id": "21",
+      "column": "done",
+      "title": "Video analysis + editing capability",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "\u2705 All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
+      "completedAt": "2026-02-04",
+      "today": false
+    },
+    {
+      "id": "80",
+      "column": "up-next",
+      "title": "Create 30s hero video",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Montage: palm climb + rice paddies + foraging + stream washing + teaching + cooking. Waiting for Iso approval to proceed.",
+      "today": true
+    },
+    {
+      "id": "22",
+      "column": "blocked",
+      "title": "Rezdy booking setup",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Carla sets up \u2014 waiting on class details",
+      "today": false
+    },
+    {
+      "id": "23",
+      "column": "done",
+      "title": "WhatsApp Business research",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Done! Report: research/whatsapp-business-setup.md",
+      "today": false,
+      "completedAt": "2026-02-04"
+    },
+    {
+      "id": "24",
+      "column": "backlog",
+      "title": "Legal research",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "License, permits, food handling, liability, insurance",
+      "today": false
+    },
+    {
+      "id": "25",
+      "column": "backlog",
+      "title": "Partnership contract with Yuka",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Profit split, roles, responsibilities",
+      "today": false
+    },
+    {
+      "id": "26",
+      "column": "backlog",
+      "title": "Teacher agreement with Made",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "50% all-in arrangement",
+      "today": false
+    },
+    {
+      "id": "27",
+      "column": "blocked",
+      "title": "About page updates",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Waiting on Made for bio info",
+      "today": false
+    },
+    {
+      "id": "28",
+      "column": "backlog",
+      "title": "Hotel pamphlets",
+      "owner": "Both",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "'What to forage in Bali' pamphlets for hotel distribution",
+      "today": false
+    },
+    {
+      "id": "29",
+      "column": "backlog",
+      "title": "Email to list",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Announce Forage Bali to forageSF email list",
+      "today": false
+    },
+    {
+      "id": "30",
+      "column": "backlog",
+      "title": "Waitlist + MailChimp",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Create waitlist, signup form on website",
+      "today": false
+    },
+    {
+      "id": "70",
+      "column": "backlog",
+      "title": "Insurance research",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Is it needed for foraging classes?",
+      "today": false
+    },
+    {
+      "id": "71",
+      "column": "backlog",
+      "title": "Transportation plan",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Provide? Pickup point? Driver? Cost?",
+      "today": false
+    },
+    {
+      "id": "72",
+      "column": "backlog",
+      "title": "Class logistics",
+      "owner": "Both",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Exact location, hours, what's included (samples, water, materials)",
+      "today": false
+    },
+    {
+      "id": "85",
+      "column": "up-next",
+      "title": "Create #noko channel + invite bot",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Noko is running but needs channel setup in Forage Bali Slack",
+      "today": false
+    }
+  ],
+  "lastUpdated": "2026-02-12T01:10:45.176Z"
+}

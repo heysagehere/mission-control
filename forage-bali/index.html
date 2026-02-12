@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mission Control</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◉</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8F7F5;
+      --card-bg: #FFFFFF;
+      --text: #1A1A1A;
+      --text-muted: #666;
+      --text-light: #999;
+      --accent: #2D5A27;
+      --accent-light: #E8F0E7;
+      --border: #E5E3DF;
+      --column-bg: #EFEEEC;
+      --blocked-bg: #F5EDEA;
+      --done-bg: #EDF5EC;
+      --high: #C13A3A;
+      --medium: #B8860B;
+      --low: #2D5A27;
+      --shadow: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.1);
+      --radius: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #141414;
+      --card-bg: #1E1E1E;
+      --text: #E8E8E8;
+      --text-muted: #999;
+      --text-light: #666;
+      --border: #2A2A2A;
+      --column-bg: #1A1A1A;
+      --blocked-bg: #1F1A18;
+      --done-bg: #181F18;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      min-height: 100dvh;
+      line-height: 1.5;
+      font-size: 14px;
+      touch-action: manipulation;
+    }
+
+    header {
+      padding: 1rem;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .last-updated {
+      font-size: 0.7rem;
+      color: var(--text-light);
+    }
+
+    .icon-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+      color: var(--text-muted);
+    }
+
+    .icon-btn:hover, .icon-btn:active { 
+      border-color: var(--accent); 
+      color: var(--accent); 
+    }
+
+    /* BIGGER TABS */
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tab {
+      flex: 1;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-muted);
+      border-radius: 8px;
+      transition: all 0.15s;
+      font-family: inherit;
+      text-align: center;
+    }
+
+    .tab:hover, .tab:active { 
+      border-color: var(--accent); 
+      color: var(--accent);
+    }
+    
+    .tab.active { 
+      background: var(--accent); 
+      color: white; 
+      border-color: var(--accent);
+    }
+
+    .filters {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
+      color: var(--text-muted);
+    }
+
+    .filter-btn:hover, .filter-btn:active { border-color: var(--accent); }
+    .filter-btn.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .filter-btn .count {
+      opacity: 0.7;
+      margin-left: 0.2rem;
+    }
+
+    /* Today View */
+    .today-view {
+      padding: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .today-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .today-section h2 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .today-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1rem;
+      margin-bottom: 0.6rem;
+      box-shadow: var(--shadow);
+      border-left: 3px solid var(--border);
+      position: relative;
+    }
+
+    .today-card.priority-high { border-left-color: var(--high); }
+    .today-card.priority-medium { border-left-color: var(--medium); }
+
+    .today-card .remove-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: none;
+      border: none;
+      color: var(--text-light);
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0.25rem;
+      line-height: 1;
+    }
+
+    .today-card .done-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 2rem;
+      background: var(--accent);
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      line-height: 1;
+      font-weight: 600;
+      transition: all 0.15s;
+    }
+
+    .today-card .done-btn:hover,
+    .today-card .done-btn:active {
+      background: var(--low);
+      transform: scale(1.05);
+    }
+
+    .calendar-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .calendar-item:last-child { border-bottom: none; }
+
+    .calendar-time {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      min-width: 55px;
+    }
+
+    .calendar-title {
+      font-size: 0.9rem;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+    }
+
+    /* Board View */
+    .board {
+      display: flex;
+      gap: 0.75rem;
+      padding: 1rem;
+      overflow-x: auto;
+      min-height: calc(100vh - 160px);
+      min-height: calc(100dvh - 160px);
+      align-items: flex-start;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    @media (max-width: 768px) {
+      .board { padding: 0.75rem; gap: 0.5rem; }
+    }
+
+    .column {
+      flex: 0 0 300px;
+      min-width: 280px;
+      max-width: 320px;
+      background: var(--column-bg);
+      border-radius: var(--radius);
+      padding: 0.75rem;
+      scroll-snap-align: start;
+    }
+
+    .column.blocked { background: var(--blocked-bg); }
+    .column.done { background: var(--done-bg); }
+
+    @media (max-width: 768px) {
+      .column {
+        flex: 0 0 88vw;
+        min-width: 88vw;
+        max-width: 88vw;
+      }
+    }
+
+    /* DESKTOP STYLES */
+    @media (min-width: 1024px) {
+      header {
+        padding: 1.25rem 2rem;
+      }
+
+      .header-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .tabs {
+        max-width: 400px;
+      }
+
+      .tab {
+        flex: none;
+        padding: 0.75rem 2rem;
+      }
+
+      /* Today view - wider, fills screen better */
+      .today-view {
+        max-width: 1100px;
+        padding: 2rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 2rem 4rem;
+      }
+
+      .today-section:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .today-section:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .today-section:nth-child(3) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+      }
+
+      .today-section:nth-child(3) .today-card {
+        display: inline-block;
+        width: calc(50% - 0.5rem);
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        vertical-align: top;
+      }
+
+      .today-section {
+        margin-bottom: 0;
+      }
+
+      .today-section h2 {
+        font-size: 0.85rem;
+      }
+
+      .today-card {
+        padding: 1.25rem 1.5rem;
+        transition: transform 0.15s, box-shadow 0.15s;
+      }
+
+      .today-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .today-card .card-title {
+        font-size: 1rem;
+      }
+
+      .today-card .card-notes {
+        font-size: 0.85rem;
+      }
+
+      /* Board view - allow horizontal scroll without clipping the left edge */
+      .board {
+        padding: 2rem;
+        justify-content: flex-start;
+        gap: 1.25rem;
+        scroll-padding-left: 2rem;
+      }
+
+      .column {
+        flex: 0 0 320px;
+        min-width: 300px;
+        max-width: 350px;
+        padding: 1rem;
+      }
+
+      .card {
+        padding: 1rem;
+        transition: transform 0.15s, box-shadow 0.15s;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .filters {
+        gap: 0.5rem;
+      }
+
+      .filter-btn {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* Extra wide screens */
+    @media (min-width: 1400px) {
+      .today-view {
+        max-width: 1300px;
+        grid-template-columns: 1fr 380px;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .today-view {
+        max-width: 1400px;
+        grid-template-columns: 1fr 420px;
+      }
+
+      .column {
+        flex: 0 0 360px;
+        max-width: 400px;
+      }
+    }
+
+    .column-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .column-title {
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--text-muted);
+    }
+
+    .column-count {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      min-height: 80px;
+      transition: background 0.2s;
+      border-radius: var(--radius);
+      padding: 2px;
+    }
+
+    .cards.drag-over {
+      background: var(--accent-light);
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 0.85rem;
+      box-shadow: var(--shadow);
+      transition: all 0.15s ease;
+      border-left: 3px solid var(--border);
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card.dragging {
+      opacity: 0.4;
+      transform: scale(0.95);
+    }
+
+    .card.done-card {
+      opacity: 0.6;
+      border-left-color: var(--low);
+    }
+
+    .card-project {
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.3rem;
+      color: var(--text-light);
+    }
+
+    .card-title {
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .card.done-card .card-title {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      background: var(--bg);
+      color: var(--text-muted);
+    }
+
+    .tag.high { background: #FDE8E8; color: var(--high); }
+    .tag.medium { background: #FDF6E3; color: var(--medium); }
+    .tag.low { background: #E8F4EA; color: var(--low); }
+
+    /* Quick actions on cards */
+    .card-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-action {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+      color: var(--text-muted);
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .card-action:hover, .card-action:active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .card-notes {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      line-height: 1.4;
+      display: none;
+    }
+
+    .card.expanded .card-notes,
+    .card.expanded .card-actions { display: flex; }
+    .card.expanded .card-notes { display: block; }
+
+    .refresh-indicator {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: var(--card-bg);
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 200;
+    }
+
+    .refresh-indicator.visible { opacity: 1; }
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      height: 100dvh;
+      color: var(--text-muted);
+    }
+
+    .hidden { display: none !important; }
+
+    /* Move modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 300;
+      padding: 1rem;
+    }
+
+    .modal {
+      background: var(--card-bg);
+      border-radius: 12px 12px 0 0;
+      width: 100%;
+      max-width: 400px;
+      padding: 1rem;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .modal h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .modal-option {
+      display: block;
+      width: 100%;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: left;
+      color: var(--text);
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .modal-option:hover, .modal-option:active {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    .modal-cancel {
+      display: block;
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: inherit;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="loading">Loading...</div>
+  <div id="refresh" class="refresh-indicator">Updated</div>
+  <div id="modal"></div>
+
+  <script>
+    const DATA_URL = 'data.json';
+    const REFRESH_INTERVAL = 30000;
+
+    let data = null;
+    let activeFilter = 'all';
+    let activeTab = 'board';
+
+    // Theme
+    function initTheme() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.dataset.theme === 'dark';
+      document.documentElement.dataset.theme = isDark ? '' : 'dark';
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      render();
+    }
+
+    initTheme();
+
+    async function fetchData() {
+      try {
+        const res = await fetch(DATA_URL + '?t=' + Date.now());
+        return await res.json();
+      } catch (e) {
+        console.error('Failed to fetch data:', e);
+        return null;
+      }
+    }
+
+    function formatTime(iso) {
+      const date = new Date(iso);
+      const now = new Date();
+      const diff = now - date;
+      if (diff < 60000) return 'now';
+      if (diff < 3600000) return Math.floor(diff / 60000) + 'm';
+      if (diff < 86400000) return Math.floor(diff / 3600000) + 'h';
+      return date.toLocaleDateString();
+    }
+
+    function getProjectName(projectId) {
+      const project = data.projects?.find(p => p.id === projectId);
+      return project ? project.name : projectId;
+    }
+
+    function getFilteredCards() {
+      if (activeFilter === 'all') return data.cards;
+      // Owner tabs
+      if (['iso', 'yuka', 'carla'].includes(activeFilter)) {
+        return data.cards.filter(c => (c.owner || '').toLowerCase() === activeFilter);
+      }
+      return data.cards;
+    }
+
+    function getIsoTodayTasks() {
+      return data.cards.filter(c => c.today === true && c.column !== 'done');
+    }
+
+    function getIsoUpcoming() {
+      return data.cards.filter(c => 
+        (c.owner || '').toLowerCase() === 'iso' && 
+        c.column !== 'done' &&
+        !c.today &&
+        (c.column === 'up-next' || c.priority === 'high')
+      ).slice(0, 5);
+    }
+
+    // Move card
+    function showMoveModal(cardId) {
+      const card = data.cards.find(c => c.id === cardId);
+      if (!card) return;
+
+      const columns = data.columns.filter(c => c.id !== card.column);
+      
+      document.getElementById('modal').innerHTML = `
+        <div class="modal-overlay" onclick="closeModal(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <h3>Move "${card.title}"</h3>
+            ${columns.map(col => `
+              <button class="modal-option" onclick="moveCard('${cardId}', '${col.id}')">${col.title}</button>
+            `).join('')}
+            <button class="modal-option" onclick="toggleToday('${cardId}')" style="border-color: var(--accent)">
+              ${card.today ? 'Remove from Today' : 'Add to Today'}
+            </button>
+            <button class="modal-cancel" onclick="closeModal()">Cancel</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function closeModal(e) {
+      if (!e || e.target.classList.contains('modal-overlay')) {
+        document.getElementById('modal').innerHTML = '';
+      }
+    }
+
+    function moveCard(cardId, newColumn) {
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.column = newColumn;
+        if (newColumn === 'done') {
+          card.completedAt = new Date().toISOString().split('T')[0];
+          card.today = false;
+        }
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator('Moved');
+        closeModal();
+        render();
+      }
+    }
+
+    function toggleToday(cardId) {
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.today = !card.today;
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator(card.today ? 'Added to Today' : 'Removed');
+        closeModal();
+        render();
+      }
+    }
+
+    function removeFromToday(cardId) {
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.today = false;
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator('Removed');
+        render();
+      }
+    }
+
+    function markDone(cardId, event) {
+      if (event) event.stopPropagation();
+      const card = data.cards.find(c => c.id === cardId);
+      if (card) {
+        card.column = 'done';
+        card.completedAt = new Date().toISOString().split('T')[0];
+        card.today = false;
+        data.lastUpdated = new Date().toISOString();
+        showRefreshIndicator('✓ Done!');
+        render();
+      }
+    }
+
+    function renderTodayView() {
+      const todayTasks = getIsoTodayTasks();
+      const upcoming = getIsoUpcoming();
+      const calendar = data.calendar || [];
+
+      return `
+        <div class="today-view">
+          <div class="today-section">
+            <h2>Today's Focus (${todayTasks.length})</h2>
+            ${todayTasks.length ? todayTasks.map(card => `
+              <div class="today-card priority-${card.priority || 'medium'}">
+                <button class="done-btn" onclick="markDone('${card.id}', event)" title="Mark done">✓</button>
+                <button class="remove-btn" onclick="removeFromToday('${card.id}')" title="Remove">×</button>
+                <div class="card-project">${getProjectName(card.project)}</div>
+                <div class="card-title">${card.title}</div>
+                ${card.notes ? `<div class="card-notes" style="display:block;margin-top:0.5rem">${card.notes}</div>` : ''}
+              </div>
+            `).join('') : '<div class="empty-state">Tap cards in Board view to add tasks here</div>'}
+          </div>
+          
+          <div class="today-section">
+            <h2>Calendar</h2>
+            ${calendar.length ? `<div style="background:var(--card-bg);border-radius:var(--radius);padding:0.5rem 1rem;box-shadow:var(--shadow)">
+              ${calendar.map(item => `
+                <div class="calendar-item">
+                  <div class="calendar-time">${item.time}</div>
+                  <div class="calendar-title">${item.title}</div>
+                </div>
+              `).join('')}
+            </div>` : '<div class="empty-state">No events today</div>'}
+          </div>
+
+          <div class="today-section">
+            <h2>Up Next</h2>
+            ${upcoming.length ? upcoming.map(card => `
+              <div class="today-card priority-${card.priority || 'medium'}" onclick="toggleToday('${card.id}')" style="cursor:pointer">
+                <div class="card-project">${getProjectName(card.project)} · tap to add</div>
+                <div class="card-title">${card.title}</div>
+              </div>
+            `).join('') : '<div class="empty-state">Nothing urgent</div>'}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderBoardView() {
+      const filteredCards = getFilteredCards();
+
+      const columnsHtml = data.columns.map(col => {
+        const cards = filteredCards.filter(c => c.column === col.id);
+        const extraClass = col.id === 'blocked' ? 'blocked' : col.id === 'done' ? 'done' : '';
+        
+        const cardsHtml = cards.map(card => {
+          const projectName = getProjectName(card.project);
+          const isDone = col.id === 'done';
+          
+          return `
+            <div class="card ${isDone ? 'done-card' : ''} ${card.today ? 'today-flagged' : ''}" 
+                 data-id="${card.id}"
+                 onclick="showMoveModal('${card.id}')">
+              <div class="card-project">${projectName}${card.today ? ' · TODAY' : ''}</div>
+              <div class="card-title">${card.title}</div>
+              <div class="card-meta">
+                <span class="tag">${card.owner}</span>
+                ${card.due ? `<span class=\"tag\">due ${card.due}</span>` : ''}
+                ${card.priority ? `<span class="tag ${card.priority}">${card.priority}</span>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <div class="column ${extraClass}" data-column="${col.id}">
+            <div class="column-header">
+              <span class="column-title">${col.title}</span>
+              <span class="column-count">${cards.length}</span>
+            </div>
+            <div class="cards">${cardsHtml || '<div class="empty-state" style="padding:1rem">Empty</div>'}</div>
+          </div>
+        `;
+      }).join('');
+
+      return `<div class="board">${columnsHtml}</div>`;
+    }
+
+    function render() {
+      const app = document.getElementById('app');
+      const isDark = document.documentElement.dataset.theme === 'dark';
+
+      // Counts
+      const activeCards = data.cards.filter(c => c.column !== 'done');
+      const ownerCounts = { iso: 0, yuka: 0, carla: 0 };
+      activeCards.forEach(c => {
+        const owner = (c.owner || '').toLowerCase();
+        if (ownerCounts[owner] !== undefined) ownerCounts[owner] += 1;
+      });
+
+      const todayCount = data.cards.filter(c => c.today && c.column !== 'done').length;
+
+      // Project filters removed for staff board (Forage Bali only)
+
+      const filtersHtml = `
+        <button class="filter-btn ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">
+          All <span class="count">${activeCards.length}</span>
+        </button>
+        <button class="filter-btn ${activeFilter === 'iso' ? 'active' : ''}" data-filter="iso">
+          Iso <span class="count">${ownerCounts.iso || 0}</span>
+        </button>
+        <button class="filter-btn ${activeFilter === 'yuka' ? 'active' : ''}" data-filter="yuka">
+          Yuka <span class="count">${ownerCounts.yuka || 0}</span>
+        </button>
+        <button class="filter-btn ${activeFilter === 'carla' ? 'active' : ''}" data-filter="carla">
+          Carla <span class="count">${ownerCounts.carla || 0}</span>
+        </button>
+      `;
+
+      const mainContent = renderBoardView();
+
+      app.innerHTML = `
+        <header>
+          <div class="header-inner">
+            <div class="header-top">
+              <h1>Mission Control</h1>
+              <div class="header-actions">
+                <span class="last-updated">${formatTime(data.lastUpdated)}</span>
+                <button class="icon-btn" onclick="toggleTheme()" title="Toggle theme">
+                  ${isDark ? '○' : '●'}
+                </button>
+              </div>
+            </div>
+            <div class="tabs">
+              <button class="tab active" data-tab="board">Board</button>
+            </div>
+            <div class="filters">${filtersHtml}</div>
+          </div>
+        </header>
+        ${mainContent}
+      `;
+
+      app.classList.remove('loading');
+
+      // Event listeners
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          activeTab = tab.dataset.tab;
+          render();
+        });
+      });
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.dataset.filter;
+          render();
+        });
+      });
+    }
+
+    function showRefreshIndicator(msg = 'Updated') {
+      const el = document.getElementById('refresh');
+      el.textContent = msg;
+      el.classList.add('visible');
+      setTimeout(() => el.classList.remove('visible'), 2000);
+    }
+
+    async function checkForUpdates() {
+      const newData = await fetchData();
+      if (!newData) return;
+      
+      if (JSON.stringify(newData) !== JSON.stringify(data)) {
+        data = newData;
+        render();
+        showRefreshIndicator();
+      }
+    }
+
+    async function init() {
+      data = await fetchData();
+      if (data) {
+        render();
+        setInterval(checkForUpdates, REFRESH_INTERVAL);
+      } else {
+        document.getElementById('app').innerHTML = '<div class="loading">Failed to load</div>';
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

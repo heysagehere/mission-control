@@ -347,13 +347,14 @@
     },
     {
       "id": "70",
-      "column": "backlog",
+      "column": "done",
       "title": "Insurance research",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Is it needed for foraging classes?",
-      "today": false
+      "notes": "\u2705 DONE! Research report: research/forage-bali-insurance-research.md. Key finding: insurance not legally required but recommended. Waiver is essential (already drafted).",
+      "today": false,
+      "completedAt": "2026-02-12"
     },
     {
       "id": "71",
@@ -498,5 +499,5 @@
       "today": false
     }
   ],
-  "lastUpdated": "2026-02-12T13:00:36.232954Z"
+  "lastUpdated": "2026-02-12T13:02:25.349109+00:00"
 }

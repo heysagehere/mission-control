@@ -490,6 +490,42 @@
       -webkit-user-select: none;
     }
 
+    .card-id {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.6rem;
+      font-size: 0.65rem;
+      color: var(--text-light);
+    }
+
+    .mini-actions {
+      position: absolute;
+      top: 0.45rem;
+      right: 0.45rem;
+      display: flex;
+      gap: 0.35rem;
+      z-index: 5;
+    }
+
+    .mini-btn {
+      width: 22px;
+      height: 22px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-btn:hover, .mini-btn:active {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
     .card:active {
       transform: scale(0.98);
       box-shadow: var(--shadow-hover);
@@ -758,6 +794,32 @@
       ).slice(0, 5);
     }
 
+    function copyText(text) {
+      try {
+        navigator.clipboard.writeText(text);
+      } catch (e) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+      }
+    }
+
+    // Request-style actions (static site)
+    function requestDone(cardId, event) {
+      if (event) event.stopPropagation();
+      copyText(`DONE #${cardId}`);
+      showRefreshIndicator('Copied: DONE');
+    }
+
+    function requestAssign(cardId, event) {
+      if (event) event.stopPropagation();
+      copyText(`ASSIGN #${cardId} to Iso|Yuka|Carla`);
+      showRefreshIndicator('Copied: ASSIGN');
+    }
+
     // Move card
     function showMoveModal(cardId) {
       const card = data.cards.find(c => c.id === cardId);
@@ -896,6 +958,11 @@
             <div class="card ${isDone ? 'done-card' : ''} ${card.today ? 'today-flagged' : ''}" 
                  data-id="${card.id}"
                  onclick="showMoveModal('${card.id}')">
+              <div class="card-id">#${card.id}</div>
+              <div class="mini-actions">
+                <button class="mini-btn" title="Mark done" onclick="requestDone('${card.id}', event)">✓</button>
+                <button class="mini-btn" title="Assign" onclick="requestAssign('${card.id}', event)">👤</button>
+              </div>
               <div class="card-project">${projectName}${card.today ? ' · TODAY' : ''}</div>
               <div class="card-title">${card.title}</div>
               <div class="card-meta">

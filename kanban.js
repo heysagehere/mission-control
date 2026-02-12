@@ -58,9 +58,35 @@ function moveCard(id, column) {
   card.column = column;
   if (column === 'done') {
     card.completedAt = new Date().toISOString().split('T')[0];
+    card.today = false;
   }
   saveData(data);
   console.log(`✓ Moved #${id} "${card.title}" from ${oldCol} → ${column}`);
+}
+
+function assignCard(id, owner) {
+  const data = loadData();
+  const card = data.cards.find(c => c.id === id);
+  if (!card) {
+    console.error(`Card #${id} not found`);
+    process.exit(1);
+  }
+  const oldOwner = card.owner;
+  card.owner = owner;
+  saveData(data);
+  console.log(`✓ Assigned #${id} "${card.title}" from ${oldOwner} → ${owner}`);
+}
+
+function setDueDate(id, due) {
+  const data = loadData();
+  const card = data.cards.find(c => c.id === id);
+  if (!card) {
+    console.error(`Card #${id} not found`);
+    process.exit(1);
+  }
+  card.due = due;
+  saveData(data);
+  console.log(`✓ Set due date for #${id} to ${due}`);
 }
 
 function listCards(opts = {}) {
@@ -119,6 +145,8 @@ Commands:
   
   move <id> <column>       Move card to column
   done <id>                Mark card as done
+  assign <id> <owner>      Assign card to owner
+  due <id> <YYYY-MM-DD>    Set due date
   list [options]           List cards
     --column <col>         Filter by column
     --owner <name>         Filter by owner
@@ -141,7 +169,7 @@ function parseOpts(args) {
 }
 
 switch (cmd) {
-  case 'add':
+  case 'add': {
     const title = args[1];
     if (!title) {
       console.error('Usage: kanban add <title> [options]');
@@ -149,23 +177,32 @@ switch (cmd) {
     }
     addCard(title, parseOpts(args.slice(2)));
     break;
-  
+  }
+
   case 'move':
     moveCard(args[1], args[2]);
     break;
-  
+
   case 'done':
     moveCard(args[1], 'done');
     break;
-  
+
+  case 'assign':
+    assignCard(args[1], args[2]);
+    break;
+
+  case 'due':
+    setDueDate(args[1], args[2]);
+    break;
+
   case 'list':
     listCards(parseOpts(args.slice(1)));
     break;
-  
+
   case 'push':
     pushToGitHub();
     break;
-  
+
   default:
     console.error(`Unknown command: ${cmd}`);
     process.exit(1);

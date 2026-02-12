@@ -386,11 +386,12 @@
         font-size: 0.85rem;
       }
 
-      /* Board view - centered, better spacing */
+      /* Board view - allow horizontal scroll without clipping the left edge */
       .board {
         padding: 2rem;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 1.25rem;
+        scroll-padding-left: 2rem;
       }
 
       .column {

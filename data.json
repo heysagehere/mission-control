@@ -46,27 +46,9 @@
       "id": "personal",
       "name": "Personal",
       "color": "#C37B7B"
-    },
-    {
-      "id": "youtube-ai",
-      "name": "YouTube AI & Culture",
-      "color": "#E74C3C"
     }
   ],
-  "calendar": [
-    {
-      "time": "10:00",
-      "title": "New Earth School - foraging classes"
-    },
-    {
-      "time": "14:00",
-      "title": "Massage"
-    },
-    {
-      "time": "19:30",
-      "title": "Call with Carla"
-    }
-  ],
+  "calendar": [],
   "cards": [
     {
       "id": "1",
@@ -76,8 +58,7 @@
       "project": "alex-ops",
       "priority": "high",
       "notes": "Enhanced UI, drag/drop, Iso's Day view",
-      "completedAt": "2026-02-03",
-      "today": false
+      "completedAt": "2026-02-03"
     },
     {
       "id": "2",
@@ -87,8 +68,7 @@
       "project": "alex-ops",
       "priority": "medium",
       "notes": "nano-banana-pro, veo, cursor-agent, xai",
-      "completedAt": "2026-02-03",
-      "today": false
+      "completedAt": "2026-02-03"
     },
     {
       "id": "10",
@@ -98,8 +78,7 @@
       "project": "knowyurself",
       "priority": "high",
       "notes": "\u2705 Created Meta app, connected know.yur.self Business account, API working. Token saved to ~/.credentials/instagram.env. Created instagram-api-setup skill.",
-      "completedAt": "2026-02-04",
-      "today": false
+      "completedAt": "2026-02-04"
     },
     {
       "id": "11",
@@ -114,14 +93,12 @@
     },
     {
       "id": "12",
-      "column": "done",
+      "column": "backlog",
       "title": "Build bank of 20+ quote images",
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "medium",
-      "notes": "\u2705 COMPLETED: 33 quotes written, 13 images created! Exceeded 20+ goal. Images saved to projects/knowyurself/instagram-images/",
-      "today": true,
-      "completedAt": "2026-02-12"
+      "notes": "For Know Yourself Instagram content"
     },
     {
       "id": "13",
@@ -130,8 +107,7 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "low",
-      "notes": "For automated posting once content is ready",
-      "today": false
+      "notes": "For automated posting once content is ready"
     },
     {
       "id": "14",
@@ -140,8 +116,7 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "low",
-      "notes": "For Know Yourself ads \u2014 after organic content proves itself",
-      "today": false
+      "notes": "For Know Yourself ads \u2014 after organic content proves itself"
     },
     {
       "id": "20",
@@ -150,8 +125,7 @@
       "owner": "Both",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "Waiting on Made to get back to us",
-      "today": false
+      "notes": "Waiting on Made to get back to us"
     },
     {
       "id": "21",
@@ -161,19 +135,17 @@
       "project": "forage-bali",
       "priority": "high",
       "notes": "\u2705 All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
-      "completedAt": "2026-02-04",
-      "today": false
+      "completedAt": "2026-02-04"
     },
     {
       "id": "80",
-      "column": "done",
+      "column": "up-next",
       "title": "Create 30s hero video",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "\u2705 DONE! Created v8 (38s) and v9 (43s with food prep). Delivered to Iso via catbox.moe links.",
-      "today": true,
-      "completedAt": "2026-02-12"
+      "notes": "Montage: palm climb + rice paddies + foraging + stream washing + teaching + cooking. Waiting for Iso approval to proceed.",
+      "today": true
     },
     {
       "id": "22",
@@ -182,8 +154,7 @@
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Carla sets up \u2014 waiting on class details",
-      "today": false
+      "notes": "Carla sets up \u2014 waiting on class details"
     },
     {
       "id": "23",
@@ -203,8 +174,7 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "License, permits, food handling, liability, insurance",
-      "today": false
+      "notes": "License, permits, food handling, liability, insurance"
     },
     {
       "id": "25",
@@ -213,8 +183,7 @@
       "owner": "Iso",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Profit split, roles, responsibilities",
-      "today": false
+      "notes": "Profit split, roles, responsibilities"
     },
     {
       "id": "26",
@@ -223,8 +192,7 @@
       "owner": "Iso",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "50% all-in arrangement",
-      "today": false
+      "notes": "50% all-in arrangement"
     },
     {
       "id": "27",
@@ -233,8 +201,7 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "low",
-      "notes": "Waiting on Made for bio info",
-      "today": false
+      "notes": "Waiting on Made for bio info"
     },
     {
       "id": "28",
@@ -243,8 +210,7 @@
       "owner": "Both",
       "project": "forage-bali",
       "priority": "low",
-      "notes": "'What to forage in Bali' pamphlets for hotel distribution",
-      "today": false
+      "notes": "'What to forage in Bali' pamphlets for hotel distribution"
     },
     {
       "id": "29",
@@ -253,8 +219,7 @@
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "low",
-      "notes": "Announce Forage Bali to forageSF email list",
-      "today": false
+      "notes": "Announce Forage Bali to forageSF email list"
     },
     {
       "id": "30",
@@ -263,8 +228,7 @@
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "low",
-      "notes": "Create waitlist, signup form on website",
-      "today": false
+      "notes": "Create waitlist, signup form on website"
     },
     {
       "id": "40",
@@ -273,9 +237,9 @@
       "owner": "Both",
       "project": "fridays-at-four",
       "priority": "medium",
-      "notes": "CANCELLED - F@4 shutting down. Replaced by personal YouTube AI & Culture channel.",
+      "notes": "Research + structure doc is ready: research/youtube-video-structure.md",
       "today": false,
-      "completedAt": "2026-02-09"
+      "completedAt": "2026-02-13"
     },
     {
       "id": "41",
@@ -284,8 +248,7 @@
       "owner": "Iso",
       "project": "alex-ops",
       "priority": "low",
-      "notes": "What does Carla need? Choose platform.",
-      "today": false
+      "notes": "What does Carla need? Choose platform."
     },
     {
       "id": "50",
@@ -294,8 +257,7 @@
       "owner": "Iso",
       "project": "personal",
       "priority": "medium",
-      "notes": "Write up yearly goals and vision",
-      "today": false
+      "notes": "Write up yearly goals and vision"
     },
     {
       "id": "51",
@@ -305,19 +267,17 @@
       "project": "personal",
       "priority": "high",
       "notes": "VN168 SGN\u2192HAN 10:10 AM Feb 3",
-      "completedAt": "2026-02-02",
-      "today": false
+      "completedAt": "2026-02-02"
     },
     {
       "id": "52",
-      "column": "done",
+      "column": "up-next",
       "title": "Fresh install Alex + Babel on Mac",
       "owner": "Both",
       "project": "alex-ops",
       "priority": "medium",
-      "notes": "\u2705 Multi-agent setup complete: VPS Alex (WhatsApp) + Local Alex (Slack) + Layla + Claude. Shared repo working.",
-      "today": false,
-      "completedAt": "2026-02-07"
+      "notes": "Git clone install, migrate memories/skills, set up Babel in Docker. Plan ready.",
+      "today": true
     },
     {
       "id": "53",
@@ -327,7 +287,7 @@
       "project": "personal",
       "priority": "high",
       "notes": "Afternoon - check out of Uma Wana Sara",
-      "today": false
+      "today": true
     },
     {
       "id": "60",
@@ -336,8 +296,7 @@
       "owner": "Iso",
       "project": "personal",
       "priority": "low",
-      "notes": "Review content, give feedback, suggest improvements",
-      "today": false
+      "notes": "Review content, give feedback, suggest improvements"
     },
     {
       "id": "61",
@@ -346,19 +305,16 @@
       "owner": "Iso",
       "project": "personal",
       "priority": "low",
-      "notes": "Help restart posting, content strategy",
-      "today": false
+      "notes": "Help restart posting, content strategy"
     },
     {
       "id": "70",
-      "column": "done",
+      "column": "backlog",
       "title": "Insurance research",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "\u2705 DONE! Research report: research/forage-bali-insurance-research.md. Key finding: insurance not legally required but recommended. Waiver is essential (already drafted).",
-      "today": false,
-      "completedAt": "2026-02-12"
+      "notes": "Is it needed for foraging classes?"
     },
     {
       "id": "71",
@@ -367,8 +323,7 @@
       "owner": "Iso",
       "project": "forage-bali",
       "priority": "low",
-      "notes": "Provide? Pickup point? Driver? Cost?",
-      "today": false
+      "notes": "Provide? Pickup point? Driver? Cost?"
     },
     {
       "id": "72",
@@ -377,18 +332,17 @@
       "owner": "Both",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Exact location, hours, what's included (samples, water, materials)",
-      "today": false
+      "notes": "Exact location, hours, what's included (samples, water, materials)"
     },
     {
       "id": "73",
-      "column": "in-progress",
+      "column": "done",
       "title": "Instagram profile setup",
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "medium",
-      "notes": "Draft complete: projects/knowyurself/instagram-profile-setup.md. Waiting on Iso to review and pick options.",
-      "today": false
+      "notes": "Profile setup plan drafted. See alex-brain/knowyurself/instagram-profile-setup.md",
+      "completedAt": "2026-02-13"
     },
     {
       "id": "74",
@@ -397,8 +351,7 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "low",
-      "notes": "Static images + trending audio",
-      "today": false
+      "notes": "Static images + trending audio"
     },
     {
       "id": "75",
@@ -407,8 +360,7 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "low",
-      "notes": "After organic content proves itself. $500 budget.",
-      "today": false
+      "notes": "After organic content proves itself. $500 budget."
     },
     {
       "id": "76",
@@ -417,19 +369,16 @@
       "owner": "Iso",
       "project": "fridays-at-four",
       "priority": "medium",
-      "notes": "Batch filming days with Nick",
-      "today": false
+      "notes": "Batch filming days with Nick"
     },
     {
       "id": "77",
-      "column": "done",
+      "column": "up-next",
       "title": "Babel first tweet",
       "owner": "Alex",
       "project": "alex-ops",
       "priority": "medium",
-      "notes": "Discord rollout: verify Babble + Noko respond in Discord DMs and that Anthropic rate-limit triggers Codex fallback. (Babel posting later.)",
-      "today": false,
-      "completedAt": "2026-02-11"
+      "notes": "After fresh install, get her posting"
     },
     {
       "id": "78",
@@ -438,8 +387,7 @@
       "owner": "Iso",
       "project": "personal",
       "priority": "medium",
-      "notes": "Personal health goal",
-      "today": false
+      "notes": "Personal health goal"
     },
     {
       "id": "79",
@@ -448,8 +396,7 @@
       "owner": "Iso",
       "project": "personal",
       "priority": "low",
-      "notes": "Personal goal - do more",
-      "today": false
+      "notes": "Personal goal - do more"
     },
     {
       "id": "81",
@@ -458,8 +405,7 @@
       "owner": "Alex",
       "project": "alex-ops",
       "priority": "medium",
-      "notes": "NIGHTTIME TASK: Find and organize all of Iso's writing - blog posts, essays, notes, drafts. Add to ~/Content/WRITING/",
-      "today": false
+      "notes": "NIGHTTIME TASK: Find and organize all of Iso's writing - blog posts, essays, notes, drafts. Add to ~/Content/WRITING/"
     },
     {
       "id": "82",
@@ -468,40 +414,107 @@
       "owner": "Alex",
       "project": "personal",
       "priority": "medium",
-      "notes": "Big project - full website redesign",
-      "today": false
+      "notes": "Big project - full website redesign"
     },
     {
       "id": "83",
-      "column": "done",
-      "title": "First episode recorded",
-      "owner": "Both",
-      "project": "youtube-ai",
-      "priority": "high",
-      "notes": "Conversation about AI agents, job displacement, consciousness. Saved to memory/episodic/youtube-conversations.md",
-      "completedAt": "2026-02-09",
-      "today": false
-    },
-    {
-      "id": "84",
-      "column": "up-next",
-      "title": "Edit first YouTube episode",
-      "owner": "Iso",
-      "project": "youtube-ai",
-      "priority": "high",
-      "notes": "Format: Iso on camera responding, Alex voice as prompts. Keep it raw.",
-      "today": false
-    },
-    {
-      "id": "85",
-      "column": "up-next",
-      "title": "Create #noko channel + invite bot",
+      "column": "backlog",
+      "title": "Add WhatsApp number on website + connect contact flow",
       "owner": "Iso",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "Noko is running but needs channel setup in Forage Bali Slack",
-      "today": false
+      "notes": ""
+    },
+    {
+      "id": "84",
+      "column": "backlog",
+      "title": "Add Bokun embed/API code to website",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": ""
+    },
+    {
+      "id": "85",
+      "column": "backlog",
+      "title": "Connect Mailchimp signup + waitlist on website",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": ""
+    },
+    {
+      "id": "86",
+      "column": "backlog",
+      "title": "Get blog backend live + start publishing SEO foraging articles",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": ""
+    },
+    {
+      "id": "87",
+      "column": "backlog",
+      "title": "Define Wise payment-request UX + confirmation flow for customers",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": ""
+    },
+    {
+      "id": "88",
+      "column": "backlog",
+      "title": "Vendor pricing: 3 vans / 3 large cars / 3 taxis (incl driver food, lead time, capacity)",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": ""
+    },
+    {
+      "id": "89",
+      "column": "backlog",
+      "title": "Write blog post: why foraging relates to Balinese culture (people+land)",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": ""
+    },
+    {
+      "id": "90",
+      "column": "backlog",
+      "title": "Record 10-min talk (Balinese culture + foraging) + 3 short personal recordings",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": ""
+    },
+    {
+      "id": "91",
+      "column": "backlog",
+      "title": "Open bank account (Yuka new ID needed) + fund 2 weeks before",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": ""
+    },
+    {
+      "id": "92",
+      "column": "backlog",
+      "title": "Flyer/handout design for cafes/hotels/retreats + print run",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": ""
+    },
+    {
+      "id": "93",
+      "column": "backlog",
+      "title": "Press targets list (luxury + travel mags) + pitch angle",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": ""
     }
   ],
-  "lastUpdated": "2026-02-13T00:00:42.961397+00:00"
+  "lastUpdated": "2026-02-14T00:00:34.543575Z"
 }

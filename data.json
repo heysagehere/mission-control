@@ -139,13 +139,13 @@
     },
     {
       "id": "80",
-      "column": "up-next",
+      "column": "blocked",
       "title": "Create 30s hero video",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "Montage: palm climb + rice paddies + foraging + stream washing + teaching + cooking. Waiting for Iso approval to proceed.",
-      "today": true
+      "notes": "Montage: palm climb + rice paddies + foraging + stream washing + teaching + cooking. Waiting for Iso approval to proceed.\n\nBLOCKED: Need Iso approval on hero video direction (use rough v1/v2? any must-include clips?) before I cut final 30s.",
+      "today": false
     },
     {
       "id": "22",

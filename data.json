@@ -287,7 +287,7 @@
       "project": "personal",
       "priority": "high",
       "notes": "Afternoon - check out of Uma Wana Sara",
-      "today": true
+      "today": false
     },
     {
       "id": "60",
@@ -378,7 +378,8 @@
       "owner": "Alex",
       "project": "alex-ops",
       "priority": "medium",
-      "notes": "After fresh install, get her posting"
+      "notes": "After fresh install, get her posting",
+      "today": true
     },
     {
       "id": "78",

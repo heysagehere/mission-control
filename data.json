@@ -51,6 +51,744 @@
   "calendar": [],
   "cards": [
     {
+      "id": "100",
+      "column": "up-next",
+      "title": "Define cancellation policy",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "How many days notice? Refund %? Rain policy = rain or shine (decided)"
+    },
+    {
+      "id": "101",
+      "column": "up-next",
+      "title": "Test full booking flow end-to-end",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Book as customer, verify emails, check Bokun"
+    },
+    {
+      "id": "102",
+      "column": "up-next",
+      "title": "Review private events page",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Check inquiry form works"
+    },
+    {
+      "id": "103",
+      "column": "up-next",
+      "title": "Final review: Made bio + class description",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Already on site, needs final approval"
+    },
+    {
+      "id": "104",
+      "column": "up-next",
+      "title": "Mobile responsive check",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Test site on phone"
+    },
+    {
+      "id": "105",
+      "column": "up-next",
+      "title": "Research hotel pamphlet examples",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "What works for concierge handouts?"
+    },
+    {
+      "id": "110",
+      "column": "up-next",
+      "title": "Finalize partnership agreement ⚡",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "PRIORITY - 25/25/50 split, roles, responsibilities"
+    },
+    {
+      "id": "111",
+      "column": "up-next",
+      "title": "Confirm meeting point for guests",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Ubud pickup location"
+    },
+    {
+      "id": "112",
+      "column": "up-next",
+      "title": "Get transport/bus pricing",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "14-15 person capacity, incl driver food, lead time"
+    },
+    {
+      "id": "113",
+      "column": "up-next",
+      "title": "Start Instagram: 4 posts/week",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Starting Monday. Crosspost from ForageSF. Use content in Forage Bali media folder"
+    },
+    {
+      "id": "114",
+      "column": "up-next",
+      "title": "Follow 10 Bali tourism accounts/day",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Build Instagram presence"
+    },
+    {
+      "id": "115",
+      "column": "up-next",
+      "title": "Print flyers for hotel visits",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Simple one-pager with QR to book"
+    },
+    {
+      "id": "120",
+      "column": "up-next",
+      "title": "Review participant waiver",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Legal review of drafted waiver"
+    },
+    {
+      "id": "121",
+      "column": "up-next",
+      "title": "Set up Bokun → Google Calendar sync",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Native Bokun integration"
+    },
+    {
+      "id": "122",
+      "column": "up-next",
+      "title": "Send ForageSF email announcement",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Announce Forage Bali to existing list"
+    },
+    {
+      "id": "123",
+      "column": "up-next",
+      "title": "Coordinate with Yuka: what guests should bring/wear",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "For confirmation email"
+    },
+    {
+      "id": "124",
+      "column": "up-next",
+      "title": "Create confirmation email template",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Include all logistics: what to wear, meeting point, timeline"
+    },
+    {
+      "id": "130",
+      "column": "up-next",
+      "title": "Fix WhatsApp number (deactivated)",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Previous number got deactivated"
+    },
+    {
+      "id": "131",
+      "column": "up-next",
+      "title": "SEO sweep (meta tags, OG images)",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "AI-first SEO optimization"
+    },
+    {
+      "id": "132",
+      "column": "up-next",
+      "title": "Add Google Analytics",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Basic tracking"
+    },
+    {
+      "id": "133",
+      "column": "up-next",
+      "title": "Hero video options",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Pan shot, people walking, woman cutting - optimize for fast loading"
+    },
+    {
+      "id": "200",
+      "column": "backlog",
+      "title": "Create brand guidelines doc",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: Colors, fonts, voice"
+    },
+    {
+      "id": "201",
+      "column": "backlog",
+      "title": "Create press packet",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: Story, photos, bios"
+    },
+    {
+      "id": "202",
+      "column": "backlog",
+      "title": "Write hotel pamphlet / concierge one-pager",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: PDF for hotel distribution"
+    },
+    {
+      "id": "203",
+      "column": "backlog",
+      "title": "Confirm what's included in class",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Transport? Food? Drinks? Depends on bus pricing"
+    },
+    {
+      "id": "204",
+      "column": "backlog",
+      "title": "Build staff dashboard",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2: Use Mission Control template, Supabase + Vercel, mobile-first"
+    },
+    {
+      "id": "210",
+      "column": "backlog",
+      "title": "Visit top hotels with flyers",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: In-person relationship building"
+    },
+    {
+      "id": "211",
+      "column": "backlog",
+      "title": "Scout backup/additional teachers",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 1-2: For expansion"
+    },
+    {
+      "id": "212",
+      "column": "backlog",
+      "title": "Start bi-weekly blog posts",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "One plant + childhood memory + Balinese culture. Write in Indonesian, AI translates"
+    },
+    {
+      "id": "220",
+      "column": "backlog",
+      "title": "TripAdvisor listing",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1"
+    },
+    {
+      "id": "221",
+      "column": "backlog",
+      "title": "Google Business Profile setup",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: Critical for local SEO"
+    },
+    {
+      "id": "222",
+      "column": "backlog",
+      "title": "Viator application",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1"
+    },
+    {
+      "id": "223",
+      "column": "backlog",
+      "title": "GetYourGuide application",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1"
+    },
+    {
+      "id": "224",
+      "column": "backlog",
+      "title": "Airbnb Experiences outreach",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: Existing relationship"
+    },
+    {
+      "id": "225",
+      "column": "backlog",
+      "title": "Klook application",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 1: Popular in Asia"
+    },
+    {
+      "id": "226",
+      "column": "backlog",
+      "title": "Research top 20 hotels + wellness retreats",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: Create outreach list"
+    },
+    {
+      "id": "227",
+      "column": "backlog",
+      "title": "Research Bali wedding planners + event planners",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: For private events, work closely with Yuka"
+    },
+    {
+      "id": "228",
+      "column": "backlog",
+      "title": "Reach out to Zola",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Existing relationship - can they sell classes as wedding gifts?"
+    },
+    {
+      "id": "229",
+      "column": "backlog",
+      "title": "Create outreach templates",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Hotels, wedding planners, event planners"
+    },
+    {
+      "id": "230",
+      "column": "backlog",
+      "title": "Set up 5-step email nurture in Mailchimp",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "For new signups: welcome → education → social proof → scarcity → nudge"
+    },
+    {
+      "id": "231",
+      "column": "backlog",
+      "title": "Set up weekly newsletter",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2: Noko drafts, staff reviews, includes upcoming classes + wild food info"
+    },
+    {
+      "id": "232",
+      "column": "backlog",
+      "title": "Set up bi-weekly Yuka + Carla calls",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Get to know each other, coordinate on partnerships"
+    },
+    {
+      "id": "240",
+      "column": "backlog",
+      "title": "Get Bokun API keys",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: For Noko integration"
+    },
+    {
+      "id": "241",
+      "column": "backlog",
+      "title": "Set up Google Drive master folder",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 1: Team folder, get OAuth for Noko"
+    },
+    {
+      "id": "242",
+      "column": "backlog",
+      "title": "Create FAQ knowledge base for Noko",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 1: What to wear, location, cancellation, etc."
+    },
+    {
+      "id": "243",
+      "column": "backlog",
+      "title": "Map full customer journey",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 1: Inquiry → booking → pre-trip → experience → follow-up"
+    },
+    {
+      "id": "244",
+      "column": "backlog",
+      "title": "Set up Forage Bali email OAuth for Noko",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 1: Send/receive emails"
+    },
+    {
+      "id": "245",
+      "column": "backlog",
+      "title": "Connect Google Business for reviews",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 1: Noko can see/draft responses to reviews"
+    },
+    {
+      "id": "246",
+      "column": "backlog",
+      "title": "Write Noko brand voice guidelines",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Month 1: Strict guidelines Noko follows exactly"
+    },
+    {
+      "id": "250",
+      "column": "backlog",
+      "title": "Create gift certificate / gifting flow",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "IMPORTANT: Gifting will be big part of business. Website flow for buying classes as gifts"
+    },
+    {
+      "id": "251",
+      "column": "backlog",
+      "title": "Gift certificate design + email template",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Beautiful PDF/email gift recipients receive"
+    },
+    {
+      "id": "252",
+      "column": "backlog",
+      "title": "Gifting integration with Zola/registry sites",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "Reach out to Zola, explore wedding registry integration"
+    },
+    {
+      "id": "253",
+      "column": "backlog",
+      "title": "Gift redemption system in Bokun",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "How do gift recipients redeem? Voucher codes?"
+    },
+    {
+      "id": "300",
+      "column": "backlog",
+      "title": "Connect Noko to Bokun API",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2: Read availability, bookings, guest info"
+    },
+    {
+      "id": "301",
+      "column": "backlog",
+      "title": "Connect Noko to Google Calendar",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2"
+    },
+    {
+      "id": "302",
+      "column": "backlog",
+      "title": "Write Noko personality guidelines",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2"
+    },
+    {
+      "id": "303",
+      "column": "backlog",
+      "title": "Connect Noko to WhatsApp",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2: Start with OpenClaw connection"
+    },
+    {
+      "id": "304",
+      "column": "backlog",
+      "title": "Noko: auto booking confirmations",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2"
+    },
+    {
+      "id": "305",
+      "column": "backlog",
+      "title": "Noko: pre-trip reminders (1 week + 1 day)",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2"
+    },
+    {
+      "id": "306",
+      "column": "backlog",
+      "title": "Test Noko on 10 sample inquiries",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2"
+    },
+    {
+      "id": "307",
+      "column": "backlog",
+      "title": "Set up Noko escalation flow",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2: When to ping Yuka/team"
+    },
+    {
+      "id": "308",
+      "column": "backlog",
+      "title": "Noko: post-trip thank you + photos",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 3: Staff drops photos in Slack, Noko creates email"
+    },
+    {
+      "id": "309",
+      "column": "backlog",
+      "title": "Noko: review requests (day 2 + 7)",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 3"
+    },
+    {
+      "id": "310",
+      "column": "backlog",
+      "title": "Noko: weekly business report to Slack",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 3: Revenue, bookings, reviews, blind spots"
+    },
+    {
+      "id": "311",
+      "column": "backlog",
+      "title": "Noko: weekly QA check",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 3: Reviews visible? Site working? Links? Booking flow?"
+    },
+    {
+      "id": "312",
+      "column": "backlog",
+      "title": "Noko: customer enrichment research",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Month 3: LinkedIn lookup, flag VIPs for personal outreach"
+    },
+    {
+      "id": "313",
+      "column": "backlog",
+      "title": "Noko: Instagram content calendar",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Month 2-3: Draft month of content, staff reviews before posting"
+    },
+    {
+      "id": "314",
+      "column": "backlog",
+      "title": "Noko: daily digest to staff",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2: Morning summary of WhatsApp conversations, issues"
+    },
+    {
+      "id": "400",
+      "column": "backlog",
+      "title": "Finalize teacher agreement with Made",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "After first class"
+    },
+    {
+      "id": "401",
+      "column": "backlog",
+      "title": "Research liability insurance",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "After first class: ~$500-2k/year"
+    },
+    {
+      "id": "402",
+      "column": "backlog",
+      "title": "Confirm tax obligations",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "After first class: 10% local tax"
+    },
+    {
+      "id": "403",
+      "column": "backlog",
+      "title": "Post-class debrief",
+      "owner": "Both",
+      "project": "forage-bali",
+      "priority": "high",
+      "notes": "After April 24: What worked, what didn't"
+    },
+    {
+      "id": "410",
+      "column": "backlog",
+      "title": "Second teacher interviews",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 3"
+    },
+    {
+      "id": "411",
+      "column": "backlog",
+      "title": "Define teacher criteria",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 3: Knowledge, personality, language, availability"
+    },
+    {
+      "id": "412",
+      "column": "backlog",
+      "title": "Create teacher training/onboarding doc",
+      "owner": "Yuka",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 3"
+    },
+    {
+      "id": "420",
+      "column": "backlog",
+      "title": "QR code review cards for guests",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Month 2: Hand out at end of experience"
+    },
+    {
+      "id": "421",
+      "column": "backlog",
+      "title": "Sign up for HARO (Featured.com)",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Free journalist queries"
+    },
+    {
+      "id": "422",
+      "column": "backlog",
+      "title": "List Bali food/travel bloggers",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "For influencer outreach"
+    },
+    {
+      "id": "423",
+      "column": "backlog",
+      "title": "Influencer hosting plan",
+      "owner": "Carla",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Comp 2-3 classes/month for coverage"
+    },
+    {
+      "id": "500",
+      "column": "backlog",
+      "title": "WebMCP protocol setup",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "Make site agent-friendly for AI search"
+    },
+    {
+      "id": "501",
+      "column": "backlog",
+      "title": "E-commerce: sell foraged products",
+      "owner": "Iso",
+      "project": "forage-bali",
+      "priority": "low",
+      "notes": "3+ months out: Source local products, sell on website"
+    },
+    {
+      "id": "502",
+      "column": "backlog",
+      "title": "GDPR/privacy compliance",
+      "owner": "Alex",
+      "project": "forage-bali",
+      "priority": "medium",
+      "notes": "Consent checkbox, privacy policy, data procedures"
+    },
+    {
       "id": "1",
       "column": "done",
       "title": "Kanban board polish",
@@ -77,7 +815,7 @@
       "owner": "Both",
       "project": "knowyurself",
       "priority": "high",
-      "notes": "\u2705 Created Meta app, connected know.yur.self Business account, API working. Token saved to ~/.credentials/instagram.env. Created instagram-api-setup skill.",
+      "notes": "✅ Created Meta app, connected know.yur.self Business account, API working.",
       "completedAt": "2026-02-04"
     },
     {
@@ -88,44 +826,7 @@
       "project": "knowyurself",
       "priority": "high",
       "notes": "Done! Report: research/instagram-selfgrowth-analysis.md",
-      "today": false,
       "completedAt": "2026-02-04"
-    },
-    {
-      "id": "12",
-      "column": "backlog",
-      "title": "Build bank of 20+ quote images",
-      "owner": "Alex",
-      "project": "knowyurself",
-      "priority": "medium",
-      "notes": "For Know Yourself Instagram content"
-    },
-    {
-      "id": "13",
-      "column": "backlog",
-      "title": "Set up Instagram scheduling tool",
-      "owner": "Alex",
-      "project": "knowyurself",
-      "priority": "low",
-      "notes": "For automated posting once content is ready"
-    },
-    {
-      "id": "14",
-      "column": "backlog",
-      "title": "Create ad creatives",
-      "owner": "Alex",
-      "project": "knowyurself",
-      "priority": "low",
-      "notes": "For Know Yourself ads \u2014 after organic content proves itself"
-    },
-    {
-      "id": "20",
-      "column": "blocked",
-      "title": "Classes page",
-      "owner": "Both",
-      "project": "forage-bali",
-      "priority": "high",
-      "notes": "Waiting on Made to get back to us"
     },
     {
       "id": "21",
@@ -134,17 +835,8 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "\u2705 All 68 videos analyzed (5.4GB). Detailed catalogue ready. Video editing via ffmpeg confirmed (clip extraction + merging). Hero montage suggestions ready. Can create in-house instead of Fiverr!",
+      "notes": "✅ All 68 videos analyzed. Hero montage suggestions ready.",
       "completedAt": "2026-02-04"
-    },
-    {
-      "id": "22",
-      "column": "blocked",
-      "title": "Rezdy booking setup",
-      "owner": "Carla",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": "Carla sets up \u2014 waiting on class details"
     },
     {
       "id": "23",
@@ -154,71 +846,7 @@
       "project": "forage-bali",
       "priority": "high",
       "notes": "Done! Report: research/whatsapp-business-setup.md",
-      "today": false,
       "completedAt": "2026-02-04"
-    },
-    {
-      "id": "24",
-      "column": "backlog",
-      "title": "Legal research",
-      "owner": "Alex",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": "License, permits, food handling, liability, insurance"
-    },
-    {
-      "id": "25",
-      "column": "backlog",
-      "title": "Partnership contract with Yuka",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": "Profit split, roles, responsibilities"
-    },
-    {
-      "id": "26",
-      "column": "backlog",
-      "title": "Teacher agreement with Made",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": "50% all-in arrangement"
-    },
-    {
-      "id": "27",
-      "column": "blocked",
-      "title": "About page updates",
-      "owner": "Alex",
-      "project": "forage-bali",
-      "priority": "low",
-      "notes": "Waiting on Made for bio info"
-    },
-    {
-      "id": "28",
-      "column": "backlog",
-      "title": "Hotel pamphlets",
-      "owner": "Both",
-      "project": "forage-bali",
-      "priority": "low",
-      "notes": "'What to forage in Bali' pamphlets for hotel distribution"
-    },
-    {
-      "id": "29",
-      "column": "backlog",
-      "title": "Email to list",
-      "owner": "Carla",
-      "project": "forage-bali",
-      "priority": "low",
-      "notes": "Announce Forage Bali to forageSF email list"
-    },
-    {
-      "id": "30",
-      "column": "backlog",
-      "title": "Waitlist + MailChimp",
-      "owner": "Carla",
-      "project": "forage-bali",
-      "priority": "low",
-      "notes": "Create waitlist, signup form on website"
     },
     {
       "id": "40",
@@ -227,102 +855,8 @@
       "owner": "Both",
       "project": "fridays-at-four",
       "priority": "medium",
-      "notes": "Research + structure doc is ready: research/youtube-video-structure.md",
-      "today": false,
+      "notes": "Research + structure doc ready",
       "completedAt": "2026-02-13"
-    },
-    {
-      "id": "41",
-      "column": "backlog",
-      "title": "Scope Carla agent",
-      "owner": "Iso",
-      "project": "alex-ops",
-      "priority": "low",
-      "notes": "What does Carla need? Choose platform."
-    },
-    {
-      "id": "50",
-      "column": "backlog",
-      "title": "2026 goals document",
-      "owner": "Iso",
-      "project": "personal",
-      "priority": "medium",
-      "notes": "Write up yearly goals and vision"
-    },
-    {
-      "id": "51",
-      "column": "done",
-      "title": "Flight check-in",
-      "owner": "Alex",
-      "project": "personal",
-      "priority": "high",
-      "notes": "VN168 SGN\u2192HAN 10:10 AM Feb 3",
-      "completedAt": "2026-02-02"
-    },
-    {
-      "id": "52",
-      "column": "up-next",
-      "title": "Fresh install Alex + Babel on Mac",
-      "owner": "Both",
-      "project": "alex-ops",
-      "priority": "medium",
-      "notes": "Git clone install, migrate memories/skills, set up Babel in Docker. Plan ready.",
-      "today": true
-    },
-    {
-      "id": "53",
-      "column": "up-next",
-      "title": "Move to new hotel",
-      "owner": "Iso",
-      "project": "personal",
-      "priority": "high",
-      "notes": "Afternoon - check out of Uma Wana Sara",
-      "today": false
-    },
-    {
-      "id": "60",
-      "column": "backlog",
-      "title": "Give Alex TikTok access",
-      "owner": "Iso",
-      "project": "personal",
-      "priority": "low",
-      "notes": "Review content, give feedback, suggest improvements"
-    },
-    {
-      "id": "61",
-      "column": "backlog",
-      "title": "Give Alex personal Instagram access",
-      "owner": "Iso",
-      "project": "personal",
-      "priority": "low",
-      "notes": "Help restart posting, content strategy"
-    },
-    {
-      "id": "70",
-      "column": "backlog",
-      "title": "Insurance research",
-      "owner": "Alex",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": "Is it needed for foraging classes?"
-    },
-    {
-      "id": "71",
-      "column": "backlog",
-      "title": "Transportation plan",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "low",
-      "notes": "Provide? Pickup point? Driver? Cost?"
-    },
-    {
-      "id": "72",
-      "column": "backlog",
-      "title": "Class logistics",
-      "owner": "Both",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": "Exact location, hours, what's included (samples, water, materials)"
     },
     {
       "id": "73",
@@ -331,171 +865,9 @@
       "owner": "Alex",
       "project": "knowyurself",
       "priority": "medium",
-      "notes": "Profile setup plan drafted. See alex-brain/knowyurself/instagram-profile-setup.md",
+      "notes": "Profile setup plan drafted",
       "completedAt": "2026-02-13"
-    },
-    {
-      "id": "74",
-      "column": "backlog",
-      "title": "Create Reels content",
-      "owner": "Alex",
-      "project": "knowyurself",
-      "priority": "low",
-      "notes": "Static images + trending audio"
-    },
-    {
-      "id": "75",
-      "column": "backlog",
-      "title": "Set up Meta Ads campaign",
-      "owner": "Alex",
-      "project": "knowyurself",
-      "priority": "low",
-      "notes": "After organic content proves itself. $500 budget."
-    },
-    {
-      "id": "76",
-      "column": "backlog",
-      "title": "YouTube filming schedule",
-      "owner": "Iso",
-      "project": "fridays-at-four",
-      "priority": "medium",
-      "notes": "Batch filming days with Nick"
-    },
-    {
-      "id": "78",
-      "column": "backlog",
-      "title": "Workout routine 3x/week",
-      "owner": "Iso",
-      "project": "personal",
-      "priority": "medium",
-      "notes": "Personal health goal"
-    },
-    {
-      "id": "79",
-      "column": "backlog",
-      "title": "Singing practice",
-      "owner": "Iso",
-      "project": "personal",
-      "priority": "low",
-      "notes": "Personal goal - do more"
-    },
-    {
-      "id": "81",
-      "column": "backlog",
-      "title": "Consolidate all writing onto system",
-      "owner": "Alex",
-      "project": "alex-ops",
-      "priority": "medium",
-      "notes": "NIGHTTIME TASK: Find and organize all of Iso's writing - blog posts, essays, notes, drafts. Add to ~/Content/WRITING/"
-    },
-    {
-      "id": "82",
-      "column": "backlog",
-      "title": "Rehaul Iso personal website",
-      "owner": "Alex",
-      "project": "personal",
-      "priority": "medium",
-      "notes": "Big project - full website redesign"
-    },
-    {
-      "id": "83",
-      "column": "backlog",
-      "title": "Add WhatsApp number on website + connect contact flow",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "high",
-      "notes": ""
-    },
-    {
-      "id": "84",
-      "column": "backlog",
-      "title": "Add Bokun embed/API code to website",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "high",
-      "notes": ""
-    },
-    {
-      "id": "85",
-      "column": "backlog",
-      "title": "Connect Mailchimp signup + waitlist on website",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "high",
-      "notes": ""
-    },
-    {
-      "id": "86",
-      "column": "backlog",
-      "title": "Get blog backend live + start publishing SEO foraging articles",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": ""
-    },
-    {
-      "id": "87",
-      "column": "backlog",
-      "title": "Define Wise payment-request UX + confirmation flow for customers",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": ""
-    },
-    {
-      "id": "88",
-      "column": "backlog",
-      "title": "Vendor pricing: 3 vans / 3 large cars / 3 taxis (incl driver food, lead time, capacity)",
-      "owner": "Yuka",
-      "project": "forage-bali",
-      "priority": "high",
-      "notes": ""
-    },
-    {
-      "id": "89",
-      "column": "backlog",
-      "title": "Write blog post: why foraging relates to Balinese culture (people+land)",
-      "owner": "Yuka",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": ""
-    },
-    {
-      "id": "90",
-      "column": "backlog",
-      "title": "Record 10-min talk (Balinese culture + foraging) + 3 short personal recordings",
-      "owner": "Yuka",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": ""
-    },
-    {
-      "id": "91",
-      "column": "backlog",
-      "title": "Open bank account (Yuka new ID needed) + fund 2 weeks before",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "high",
-      "notes": ""
-    },
-    {
-      "id": "92",
-      "column": "backlog",
-      "title": "Flyer/handout design for cafes/hotels/retreats + print run",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "medium",
-      "notes": ""
-    },
-    {
-      "id": "93",
-      "column": "backlog",
-      "title": "Press targets list (luxury + travel mags) + pitch angle",
-      "owner": "Iso",
-      "project": "forage-bali",
-      "priority": "low",
-      "notes": ""
     }
   ],
-  "lastUpdated": "2026-02-14T00:00:34.543575Z"
+  "lastUpdated": "2026-02-18T05:30:00.000Z"
 }

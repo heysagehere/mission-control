@@ -57,7 +57,8 @@
       "owner": "Iso",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "How many days notice? Refund %? Rain policy = rain or shine (decided)"
+      "notes": "How many days notice? Refund %? Rain policy = rain or shine (decided)",
+      "today": true
     },
     {
       "id": "101",
@@ -66,7 +67,8 @@
       "owner": "Iso",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "Book as customer, verify emails, check Bokun"
+      "notes": "Book as customer, verify emails, check Bokun",
+      "today": true
     },
     {
       "id": "102",
@@ -107,7 +109,7 @@
     {
       "id": "110",
       "column": "up-next",
-      "title": "Finalize partnership agreement ⚡",
+      "title": "Finalize partnership agreement \u26a1",
       "owner": "Yuka",
       "project": "forage-bali",
       "priority": "high",
@@ -170,7 +172,7 @@
     {
       "id": "121",
       "column": "up-next",
-      "title": "Set up Bokun → Google Calendar sync",
+      "title": "Set up Bokun \u2192 Google Calendar sync",
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "high",
@@ -219,7 +221,7 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "✅ AUDIT READY: ForAlex/foragebali-seo-audit.md - Full recommendations for meta tags, OG tags, structured data, Google Business. Needs Iso to implement or give code access."
+      "notes": "\u2705 AUDIT READY: ForAlex/foragebali-seo-audit.md - Full recommendations for meta tags, OG tags, structured data, Google Business. Needs Iso to implement or give code access."
     },
     {
       "id": "132",
@@ -237,7 +239,8 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "✅ OPTIONS READY: 2 videos in ForAlex (hero_v8, hero_v9). See hero-video-notes.md for compression specs. Iso to pick which one, then Alex compresses."
+      "notes": "\u2705 OPTIONS READY: 2 videos in ForAlex (hero_v8, hero_v9). See hero-video-notes.md for compression specs. Iso to pick which one, then Alex compresses.",
+      "today": true
     },
     {
       "id": "200",
@@ -408,7 +411,7 @@
       "owner": "Carla",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "For new signups: welcome → education → social proof → scarcity → nudge"
+      "notes": "For new signups: welcome \u2192 education \u2192 social proof \u2192 scarcity \u2192 nudge"
     },
     {
       "id": "231",
@@ -462,7 +465,7 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "Month 1: Inquiry → booking → pre-trip → experience → follow-up"
+      "notes": "Month 1: Inquiry \u2192 booking \u2192 pre-trip \u2192 experience \u2192 follow-up"
     },
     {
       "id": "244",
@@ -815,7 +818,7 @@
       "owner": "Both",
       "project": "knowyurself",
       "priority": "high",
-      "notes": "✅ Created Meta app, connected know.yur.self Business account, API working.",
+      "notes": "\u2705 Created Meta app, connected know.yur.self Business account, API working.",
       "completedAt": "2026-02-04"
     },
     {
@@ -835,7 +838,7 @@
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "✅ All 68 videos analyzed. Hero montage suggestions ready.",
+      "notes": "\u2705 All 68 videos analyzed. Hero montage suggestions ready.",
       "completedAt": "2026-02-04"
     },
     {
@@ -867,7 +870,26 @@
       "priority": "medium",
       "notes": "Profile setup plan drafted",
       "completedAt": "2026-02-13"
+    },
+    {
+      "id": "600",
+      "column": "up-next",
+      "title": "Add /privacy and /terms pages",
+      "owner": "Iso",
+      "project": "fridays-at-four",
+      "priority": "high",
+      "notes": "\ud83d\udd34 CRITICAL: Required for GDPR/CCPA - collecting emails on waitlist. Use TermsFeed or similar generator.",
+      "today": true
+    },
+    {
+      "id": "601",
+      "column": "up-next",
+      "title": "Fix waitlist copy (\"creative\" \u2192 \"business owner\")",
+      "owner": "Iso",
+      "project": "fridays-at-four",
+      "priority": "medium",
+      "notes": "Leftover text from old iteration"
     }
   ],
-  "lastUpdated": "2026-02-18T05:30:00.000Z"
+  "lastUpdated": "2026-02-20T07:00:00.000Z"
 }

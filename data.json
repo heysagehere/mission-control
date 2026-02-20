@@ -99,12 +99,13 @@
     },
     {
       "id": "105",
-      "column": "up-next",
+      "column": "done",
       "title": "Research hotel pamphlet examples",
-      "owner": "Iso",
+      "owner": "Alex",
       "project": "forage-bali",
       "priority": "medium",
-      "notes": "What works for concierge handouts?"
+      "notes": "✅ DONE: ForAlex/hotel-pamphlet-research.md - Format recs, must-have elements, design principles, template resources.",
+      "completedAt": "2026-02-20"
     },
     {
       "id": "110",
@@ -207,12 +208,12 @@
     },
     {
       "id": "130",
-      "column": "up-next",
+      "column": "blocked",
       "title": "Fix WhatsApp number (deactivated)",
       "owner": "Alex",
       "project": "forage-bali",
       "priority": "high",
-      "notes": "Previous number got deactivated"
+      "notes": "⏳ BLOCKED: Account flagged/deactivated. Needs Iso to get new WhatsApp number, then Alex updates website."
     },
     {
       "id": "131",
@@ -891,5 +892,5 @@
       "notes": "Leftover text from old iteration"
     }
   ],
-  "lastUpdated": "2026-02-20T07:00:00.000Z"
+  "lastUpdated": "2026-02-20T13:05:00.000Z"
 }
